@@ -1,0 +1,21 @@
+*{
+    text-align: center;
+    height: 100%;
+    margin-top: 5%;
+    direction: rtl;
+}
+input {
+    border-color: #ffc107;
+    display: block;
+    margin-top: 1%;
+    padding: 2%;
+    font-size: 120%;
+    margin-right: 10%;
+}
+select {
+    display: flex;
+    margin-top: 1%;
+    width: 55%;
+    padding: 2%;
+    font-size: 120%;
+}

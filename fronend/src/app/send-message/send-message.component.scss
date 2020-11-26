@@ -1,0 +1,33 @@
+#textarea{
+    margin-left: 45vw;
+    width:500px;
+    height:300;
+    z-index:  -2;
+
+}
+#h2{
+    color: grey;
+}
+#logo {
+    position: absolute;
+    opacity: 0.4;
+    margin-top: -80vh;
+    width: 58%;
+    margin-left: 18vw;
+    z-index: inherit -2;
+ }
+#ReturnToHomePage {
+    color: grey;
+    margin:2vw;
+}
+input {
+    margin: auto;
+    direction: rtl;
+    margin-top: 1%;
+}
+p{
+    font-size: 250%;
+    color: grey;
+    text-align: center;
+    font-family: unset;
+}

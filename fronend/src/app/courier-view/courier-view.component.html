@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div id="bt" class="col d-flex justify-content-around">
+        <a routerLink="UpdateDetailsCourier" class="nav-item text-right mr-2 align-self-center"
+            routerLinkActive='active'>
+            <b>עדכון פרטים אישיים</b>
+        </a>
+        <a routerLink="ShipmentsCourierView" class="nav-item text-right mr-2 align-self-center"
+            routerLinkActive='active'>
+            <b>מסלול משלוחים יומי</b>
+        </a>
+        <img id="logo1" src="../../assets/logoDoarim.png" alt="">
+        <a routerLink="ShippingSelection" class="nav-item text-right mr-2 align-self-center" routerLinkActive='active'>
+            <b>צפיה בפרטי משלוחים</b>
+        </a>
+        <a routerLink="commentsToCourier" class="nav-item text-right mr-2 align-self-center" routerLinkActive='active'>
+            <b>הערות והארות</b>
+        </a>
+    </div>
+</nav>
+<a routerLink="ReturnToHomePage" routerLinkActive='active' (click)="returnHome()">
+    <svg width="4em" id="ReturnToHomePage" height="4em" viewBox="0 0 24 24" class="bi bi-house-door" fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+            d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z" />
+        <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+    </svg>
+</a>
+<div class="container">
+    <!-- <br>
+    <br>
+    <input type="text" placeholder="" name="" class="form-control" id="" ngx-google-places-autocomplete
+        [options]='options' (onAddressChange)="CollactionAddressChange($event)" />
+    {{ formattedaddress }} -->
+    <!-- </div>
+<div>
+    <h4>טבלת משלוחים יומית</h4>
+    <table>
+        <tr *ngFor="let i of packages">
+            <td>קוד חבילה: {{i.packageId}}</td>
+            <td>כתובת איסוף: {{i.collectionAddress}}</td>
+            <td>קומת איסוף: {{i.cFloor}}</td>
+            <td>כתובת יעד: {{i.destination}}</td>
+            <td>קומת יעד: {{i.dFloor}}</td>
+            <td>שם פרטי: {{i.firstName}}</td>
+            <td>שם משפחה: {{i.lastName}}</td>
+            <td>אמייל: {{i.email}}</td>
+            <td>טלפון שולח: {{i.SenderPhone}}</td>
+            <td>שם בחשבונית: {{i.invoiceName}}</td>
+            <td>טלפון מקבל המשלוח: {{i.phoneReceivesShipping}}</td>
+            <td>שם חברה: {{i.companyName}}</td>
+            <td>שם מלא: {{i.fullName}}</td>
+            <td>משך השליחה: {{i.duringSending}}</td>
+            <td>משקל: {{i.weigth}}</td>
+            <td>תאריך נוכחי: {{i.dateNow}}</td>
+            <td>תאור: {{i.description}}</td>
+            <td>סטטוס: {{i.status}}</td>
+        </tr>
+    </table>
+</div>
+<agm-map [latitude]="lat" [longitude]="lng">
+    <agm-direction [origin]="origin" [destination]="destination"></agm-direction>
+</agm-map> -->
+
+    <!-- שימוש בשליחת קישור לוויז -->
+    <!-- https://waze.com/ul?param_name=value[&param_name=value] -->
+
+    <router-outlet></router-outlet>

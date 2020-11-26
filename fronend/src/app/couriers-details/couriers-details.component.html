@@ -1,0 +1,35 @@
+<!-- <p>couriers-details works!</p> -->
+<h3> פרטי משלוחנים</h3>
+<br>
+<div *ngFor="let i of couriers" style="display: inline-block;">
+    <div class="card" style="width: 18rem; text-align: center;">
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+            <p class="card-text" id="madeInShipingFront">קוד אישי: {{i.courierPersonalCode}}</p>
+            <p class="card-text" id="madeInShipingFront">קוד משולחן: {{i.courierTz}}</p>
+            <p class="card-text" id="madeInShipingFront">שם פרטי: {{i.courierFirstName}}</p>
+            <p class="card-text" id="madeInShipingFront">שם משפחה: {{i.courierLastName}}</p>
+            <p class="card-text" id="madeInShipingFront">טלפון: {{i.courierPhone}}</p>
+            <p class="card-text" id="madeInShipingFront">כתובת: {{i.courierAddress}}</p>
+            <p class="card-text" id="madeInShipingFront">עיר: {{i.courierCity}}</p>
+            <p class="card-text" id="madeInShipingFront">סטטוס: {{i.courierStatus}}</p>
+        </div>
+    </div>
+</div>
+<div>
+    <!-- <p>טבלת משולחנים</p>
+    <table>
+        <tr *ngFor="let i of couriers">
+            <td>קוד אישי: {{i.personalCode}}</td>
+            <td>קוד משולחן: {{i.courierTz}}</td>
+            <td>שם פרטי: {{i.firstName}}</td>
+            <td>שם משפחה: {{i.lastName}}</td>
+            <td>טלפון: {{i.phone}}</td>
+            <td>כתובת: {{i.address}}</td>
+            <td>עיר: {{i.city}}</td>
+            <td>סטטוס: {{i.status}}</td>
+            <td><input type="button" value="מחיקה" (click)="Delete()"></td>
+        </tr>
+    </table> -->
+    <!-- <input type="button" value="הוספת משלוחן חדש" (click)="AddNewCourier()"> -->
+</div>

@@ -1,0 +1,45 @@
+<!-- <p>ordershipping works!</p> -->
+<div id="ordershippingBox">
+    <h1>הזמנת שליחויות!!!!!!!!</h1>
+    <!-- <input type="text" tabindex="1" class="input-group-text" [(ngModel)]="packageDetails.CollectionAddressPac"
+        name="CollectionAddress" placeholder="(כתובת איסוף (שדה חובה" required="required"> -->
+    <input type="text" class="input-group-text" [(ngModel)]="packageDetails.cfloorPac" name="Cfloor" placeholder="קומה"
+        required="required">
+    <input type="text" class="input-group-text" [(ngModel)]="packageDetails.destinationPac" name="Destination"
+        placeholder="(יעד (שדה חובה" required="required">
+    <!-- <input type="text" class="input-group-text" [(ngModel)]="packageDetails.dfloorPac" name="Dfloor" placeholder="קומה"
+        required="required"> -->
+    <input type="text" class="input-group-text" name="FullName" placeholder="שם מלא" required="required">
+    <input type="text" class="input-group-text" [(ngModel)]="packageDetails.firstNamePac" name="firstName"
+        placeholder="שם פרטי" required="required">
+    <input type="text" class="input-group-text" [(ngModel)]="packageDetails.lastNamePac" name="LastName"
+        placeholder="שם משפחה" required="required">
+    <input type="text" class="input-group-text" [(ngModel)]="packageDetails.emailPac" name="Email"
+        placeholder="(מייל של המזמין (חובה" required="required">
+    <input type="text" class="input-group-text" [(ngModel)]="packageDetails.phoneReceivesShippingPac" name="SenderPhone"
+        placeholder="(טלפון של השולח (חובה" required="required">
+    <input type="text" class="input-group-text" [(ngModel)]="packageDetails.invoiceNamePac" name="InvoiceName"
+        placeholder="שם בחשבונית" required="required">
+    <input type="text" class="input-group-text" [(ngModel)]="packageDetails.companyNamePac" name="CompanyName"
+        placeholder="שם חברה" required="required">
+    <input type="text" class="input-group-text" [(ngModel)]="packageDetails.phoneReceivesShippingPac" name="Phone"
+        placeholder="  (טלפון של המקבל (חובה" required="required">
+    <input type="text" class="input-group-text" [(ngModel)]="packageDetails.statusPac" name="Status"
+        placeholder=" סטטוס " required="required">
+    <select class="custom-select" [(ngModel)]="packageDetails.weigthPac" name="Weigth">
+        <option value="1">עד 3 קילו</option>
+        <option value="2">מ-3 עד 10 קילו</option>
+    </select>
+    <select class="custom-select" [(ngModel)]="packageDetails.duringSendingPac" name="DuringSending">
+        <option value="1">רגיל עד 4 שעות</option>
+        <option value="2">דחוף עד שעתים</option>
+        <option value="3">לא דחוף עד 12 שעות</option>
+    </select>
+    <input type="text" class="input-group-text" [(ngModel)]="packageDetails.descriptionPac" name="Commends"
+        placeholder=" הערות" required="required">
+    <input type="text" class="input-group-text" [(ngModel)]="packageDetails.dateNowPac" name="DateNow"
+        placeholder=" התאריך של היום " required="required">
+    <input type="text" class="input-group-text" [(ngModel)]="packageDetails.statusPac" name="Description"
+        placeholder=" תאור המשלוח " required="required">
+    <input type="submit" class="input-group-text" (click)="save()">
+</div>

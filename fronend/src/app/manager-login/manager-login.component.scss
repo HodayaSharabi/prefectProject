@@ -1,0 +1,34 @@
+// body, html {
+//     background-image: url(../../assets/logo.png);
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     height: 100vh;
+// }
+* {
+    text-align: center;
+}
+p {
+    margin: 2%;
+    font-size: 250%;
+    color: darkslategrey;
+}
+input {
+    margin: 2%;
+    width: 15%;
+    z-index:2;
+}
+#logo {
+    position: absolute;
+    opacity: 0.4;
+    margin-top: -51vh;
+    width: 58%;
+    direction: rtl;
+    right: 14vw;
+    z-index: -2;
+}
+#ReturnToHomePage {
+    color: grey;
+    margin: 2vw;
+    direction: rtl;
+    display: block;
+}

@@ -1,0 +1,33 @@
+<a routerLink="ReturnToHomePage" routerLinkActive='active' (click)="returnHome()">
+    <svg width="4em" id="ReturnToHomePage" height="4em" viewBox="0 0 24 24" class="bi bi-house-door" fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+            d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z" />
+        <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+    </svg>
+</a>
+<div id="form" [style.z-index]="3">
+    <p class="d-flex justify-content-center">צרו איתנו קשר</p>
+    <h2 class="d-flex justify-content-center">אתם מוזמנים לפנות אלינו, נשמח לשמוע מכם!</h2>
+    <h2 class="d-flex justify-content-center">ניתן ליצור איתנו קשר גם בטלפון בשעות העבודה.</h2>
+    <h2 class="d-flex justify-content-center">מלאו את הטופס ואנו נחזור אליכם בהקדם!</h2>
+    <input type="text" class="input-group-text d-flex justify-content-center" placeholder="שם מלא"
+        [(ngModel)]="contactFile.fullName" name="fullName">
+    <input type="text" class="input-group-text d-flex justify-content-center" placeholder=" טלפון "
+        [(ngModel)]="contactFile.phone">
+    <input type="text" class="input-group-text d-flex justify-content-center" placeholder="דואר אלקטרוני"
+        [(ngModel)]="contactFile.email">
+    <select class="custom-select d-flex justify-content-center" id="application"
+        [(ngModel)]="contactFile.theCauseOfReferral">
+        <option value="1">קבלת הצעת מחיר</option>
+        <option value="2">שירות לקוחות</option>
+        <option value="3">תמיכה טכנית</option>
+        <option value="4">דרושים</option>
+        <option value="5">הנהלת חשבונות</option>
+    </select>
+    <br>
+    <input class="btn btn-secondary d-flex justify-content-center" type="submit" (click)="SendMasage()">
+
+</div>
+
+<img id="logo" src="../../assets/logoDoarim.png" alt="">

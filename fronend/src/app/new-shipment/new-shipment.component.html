@@ -1,0 +1,143 @@
+<!-- <p>new-shipment works!</p> -->
+<div id="form">
+    <div class="container-fluid">
+        <form>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4"> </label>
+                        <input type="text" [(ngModel)]="newShipment.collectionAddressPac" placeholder="כתובת איסוף"
+                            name="collactionAddress" class="form-control" id="inputEmail4"
+                            ngx-google-places-autocomplete [options]='options'
+                            (onAddressChange)="CollactionAddressChange($event)" />
+                        {{ formattedaddress }}
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4"></label>
+                        <input type="text" [(ngModel)]="newShipment.cfloorPac" name="cfloor" class="form-control"
+                            id="inputEmail4" placeholder="קומת איסוף">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4"></label>
+                        <input type="text" [(ngModel)]="newShipment.destinationPac" placeholder="כתובת יעד"
+                            name="destinationAddress" class="form-control" id="inputEmail4"
+                            ngx-google-places-autocomplete [options]='options'
+                            (onAddressChange)="DestinationAddressChange($event)" />
+                        {{ formattedaddress }}
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4"></label>
+                        <input type="text" [(ngModel)]="newShipment.dfloorPac" name="floorDestination"
+                            class="form-control" id="inputEmail4" placeholder="קומת יעד">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4"></label>
+                        <input type="text" [(ngModel)]="newShipment.firstNamePac" name="firstNameOfSending"
+                            class="form-control" id="inputEmail4" placeholder="שם פרטי של השולח">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4"></label>
+                        <input type="text" [(ngModel)]="newShipment.lastNamePac" name="lastNameOfSending"
+                            class="form-control" id="inputEmail4" placeholder="שם משפחה של השולח">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4"> </label>
+                        <input type="email" name="email" class="form-control" id="inputEmail4"
+                            [(ngModel)]="newShipment.emailPac" placeholder="אמייל">
+                    </div>
+                </div>
+                <div class="col">
+
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4"></label>
+                        <input type="text" [(ngModel)]="newShipment.invoiceNamePac" name="invoiceName"
+                            class="form-control" id="inputEmail4" placeholder="שם חשבונית מס">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4"></label>
+                        <input type="text" [(ngModel)]="newShipment.invoiceNamePac" name="invoiceName"
+                            class="form-control" id="inputEmail4" placeholder="שם חשבונית מס">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4"></label>
+                        <input type="tel" [(ngModel)]="newShipment.phoneReceivesShippingPac" name="phoneReceives"
+                            class="form-control" id="inputPassword4" placeholder="מספר טלפון של המקבל">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="inputAddress"></label>
+                        <input type="text" [(ngModel)]="newShipment.companyNamePac" name="companyName"
+                            class="form-control" id="inputAddress" placeholder="שם חברה">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="inputAddress2"></label>
+                        <input type="text" [(ngModel)]="newShipment.fullNamePac" name="fullNameOfReceive"
+                            class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"
+                            placeholder=" שם מלאה של המקבל">
+                    </div>
+                </div>
+            </div>
+
+            <div></div>
+            <div class="form-group">
+                <label for="inputAddress2"></label>
+                <input type="text" [(ngModel)]="newShipment.duringSendingPac" name="duringSending" class="form-control"
+                    id="inputAddress2" placeholder=" משך שליחה">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputState"></label>
+                    <select id="inputState" [(ngModel)]="newShipment.weigthPac" name="weigth" class="form-control"
+                        aria-placeholder="משקל">
+                        <option>עד 3 קילו</option>
+                        <option>עד 6 קילו</option>
+                        <option>עד 10 קילו</option>
+                        <option>מעל 10 קילו</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputZip"></label>
+                    <input type="text" [(ngModel)]="newShipment.descriptionPac" name="description" class="form-control"
+                        id="inputZip" placeholder="תיאור">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1"></label>
+                <textarea class="form-control" [(ngModel)]="newShipment.commendsPac" name="commends"
+                    id="exampleFormControlTextarea1" rows="3" placeholder="הערות"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="GetNewShipment()">עדכן</button>
+        </form>
+    </div>
+</div>

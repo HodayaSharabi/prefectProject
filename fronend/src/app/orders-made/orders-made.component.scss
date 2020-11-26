@@ -1,0 +1,29 @@
+#inline{
+    display: inline-block;
+    }
+    .card {
+        display: inline-block;
+        border-color: #6f1342;
+        border-width: medium;
+        padding: 0.5vw;
+        margin: 0.5vw;
+        height: 122vh;
+    }
+    #a{
+        direction: rtl; 
+    }
+    h3 {
+        text-align: center;
+        color:#6f1342;
+        margin-top: -11vh;
+    }
+    agm-map {
+        height: 50vh;
+    }
+    
+    #CouriersWay {
+        display: inline-block;
+        margin-left: 2vw;
+        text-align: center;
+        font-size: 3vh;
+    }

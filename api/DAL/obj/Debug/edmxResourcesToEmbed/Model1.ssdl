@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CourierCompanyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Coment">
+    <Key>
+      <PropertyRef Name="ResponseId" />
+    </Key>
+    <Property Name="ResponseId" Type="int" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Response" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="FullName" />
+    </Key>
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="TheCauseOfReferral" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CourierPackage">
+    <Key>
+      <PropertyRef Name="CourierId" />
+    </Key>
+    <Property Name="CourierId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CourierPackageId" Type="int" />
+    <Property Name="PackageId" Type="int" />
+    <Property Name="DateCollect" Type="date" />
+    <Property Name="DateBring" Type="date" />
+    <Property Name="DateNow" Type="date" />
+  </EntityType>
+  <EntityType Name="Couriers">
+    <Key>
+      <PropertyRef Name="CourierId" />
+    </Key>
+    <Property Name="CourierId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PersonalCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CourierTz" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="TypeOfTransport" Type="int" />
+  </EntityType>
+  <EntityType Name="CouriersComments">
+    <Key>
+      <PropertyRef Name="ResponseId" />
+    </Key>
+    <Property Name="ResponseId" Type="int" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Response" Type="nvarchar" MaxLength="50" />
+    <Property Name="CourierId" Type="int" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="CustomerPersonalCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerTz" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerFirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerLastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerStatus" Type="int" />
+  </EntityType>
+  <EntityType Name="MadeShipments">
+    <Key>
+      <PropertyRef Name="PackageId" />
+    </Key>
+    <Property Name="PackageId" Type="int" Nullable="false" />
+    <Property Name="CustomerId" Type="nvarchar" MaxLength="50" />
+    <Property Name="CollectionAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cfloor" Type="int" />
+    <Property Name="Destination" Type="nvarchar" MaxLength="50" />
+    <Property Name="Dfloor" Type="int" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="SenderPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="InvoiceName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneReceivesShipping" Type="nvarchar" MaxLength="50" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DuringSending" Type="nvarchar" MaxLength="50" />
+    <Property Name="Weigth" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateNow" Type="date" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Commends" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PackageAddress">
+    <Key>
+      <PropertyRef Name="IdAddress" />
+    </Key>
+    <Property Name="IdAddress" Type="int" Nullable="false" />
+    <Property Name="IdPackage" Type="int" />
+    <Property Name="SourcePackageLon" Type="int" />
+    <Property Name="SourcePackageLat" Type="int" />
+    <Property Name="DestinetionPackageLon" Type="int" />
+    <Property Name="DestinationPackageLat" Type="int" />
+  </EntityType>
+  <EntityType Name="Packages">
+    <Key>
+      <PropertyRef Name="PackageId" />
+    </Key>
+    <Property Name="PackageId" Type="int" Nullable="false" />
+    <Property Name="CollectionAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cfloor" Type="int" />
+    <Property Name="Destination" Type="nvarchar" MaxLength="50" />
+    <Property Name="Dfloor" Type="int" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="SenderPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="InvoiceName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneReceivesShippingPac" Type="nvarchar" MaxLength="50" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DuringSending" Type="nvarchar" MaxLength="50" />
+    <Property Name="Weigth" Type="int" />
+    <Property Name="DateNow" Type="date" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="CommendsPac" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'CourierCompany.dbo.PackagesToCouriers' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="PackagesToCouriers">
+          <Property Name="CourierCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="PackageCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+  <EntityContainer Name="CourierCompanyModelStoreContainer">
+    <EntitySet Name="Coment" EntityType="Self.Coment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CourierPackage" EntityType="Self.CourierPackage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Couriers" EntityType="Self.Couriers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CouriersComments" EntityType="Self.CouriersComments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MadeShipments" EntityType="Self.MadeShipments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PackageAddress" EntityType="Self.PackageAddress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Packages" EntityType="Self.Packages" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

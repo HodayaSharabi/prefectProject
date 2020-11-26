@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CourierCompanyModelStoreContainer" CdmEntityContainer="CourierCompanyEntities">
+    <EntitySetMapping Name="Coment">
+      <EntityTypeMapping TypeName="CourierCompanyModel.Coment">
+        <MappingFragment StoreEntitySet="Coment">
+          <ScalarProperty Name="ResponseId" ColumnName="ResponseId" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Response" ColumnName="Response" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contact">
+      <EntityTypeMapping TypeName="CourierCompanyModel.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="TheCauseOfReferral" ColumnName="TheCauseOfReferral" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CourierPackage">
+      <EntityTypeMapping TypeName="CourierCompanyModel.CourierPackage">
+        <MappingFragment StoreEntitySet="CourierPackage">
+          <ScalarProperty Name="CourierId" ColumnName="CourierId" />
+          <ScalarProperty Name="CourierPackageId" ColumnName="CourierPackageId" />
+          <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+          <ScalarProperty Name="DateCollect" ColumnName="DateCollect" />
+          <ScalarProperty Name="DateBring" ColumnName="DateBring" />
+          <ScalarProperty Name="DateNow" ColumnName="DateNow" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Couriers">
+      <EntityTypeMapping TypeName="CourierCompanyModel.Couriers">
+        <MappingFragment StoreEntitySet="Couriers">
+          <ScalarProperty Name="CourierId" ColumnName="CourierId" />
+          <ScalarProperty Name="PersonalCode" ColumnName="PersonalCode" />
+          <ScalarProperty Name="CourierTz" ColumnName="CourierTz" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TypeOfTransport" ColumnName="TypeOfTransport" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CouriersComments">
+      <EntityTypeMapping TypeName="CourierCompanyModel.CouriersComments">
+        <MappingFragment StoreEntitySet="CouriersComments">
+          <ScalarProperty Name="ResponseId" ColumnName="ResponseId" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Response" ColumnName="Response" />
+          <ScalarProperty Name="CourierId" ColumnName="CourierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="CourierCompanyModel.Customers">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="CustomerPersonalCode" ColumnName="CustomerPersonalCode" />
+          <ScalarProperty Name="CustomerTz" ColumnName="CustomerTz" />
+          <ScalarProperty Name="CustomerFirstName" ColumnName="CustomerFirstName" />
+          <ScalarProperty Name="CustomerLastName" ColumnName="CustomerLastName" />
+          <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+          <ScalarProperty Name="CustomerCity" ColumnName="CustomerCity" />
+          <ScalarProperty Name="CustomerPhone" ColumnName="CustomerPhone" />
+          <ScalarProperty Name="CustomerStatus" ColumnName="CustomerStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MadeShipments">
+      <EntityTypeMapping TypeName="CourierCompanyModel.MadeShipments">
+        <MappingFragment StoreEntitySet="MadeShipments">
+          <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="CollectionAddress" ColumnName="CollectionAddress" />
+          <ScalarProperty Name="Cfloor" ColumnName="Cfloor" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="Dfloor" ColumnName="Dfloor" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SenderPhone" ColumnName="SenderPhone" />
+          <ScalarProperty Name="InvoiceName" ColumnName="InvoiceName" />
+          <ScalarProperty Name="PhoneReceivesShipping" ColumnName="PhoneReceivesShipping" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="DuringSending" ColumnName="DuringSending" />
+          <ScalarProperty Name="Weigth" ColumnName="Weigth" />
+          <ScalarProperty Name="DateNow" ColumnName="DateNow" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Commends" ColumnName="Commends" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PackageAddress">
+      <EntityTypeMapping TypeName="CourierCompanyModel.PackageAddress">
+        <MappingFragment StoreEntitySet="PackageAddress">
+          <ScalarProperty Name="IdAddress" ColumnName="IdAddress" />
+          <ScalarProperty Name="IdPackage" ColumnName="IdPackage" />
+          <ScalarProperty Name="SourcePackageLon" ColumnName="SourcePackageLon" />
+          <ScalarProperty Name="SourcePackageLat" ColumnName="SourcePackageLat" />
+          <ScalarProperty Name="DestinetionPackageLon" ColumnName="DestinetionPackageLon" />
+          <ScalarProperty Name="DestinationPackageLat" ColumnName="DestinationPackageLat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Packages">
+      <EntityTypeMapping TypeName="CourierCompanyModel.Packages">
+        <MappingFragment StoreEntitySet="Packages">
+          <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+          <ScalarProperty Name="CollectionAddress" ColumnName="CollectionAddress" />
+          <ScalarProperty Name="Cfloor" ColumnName="Cfloor" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="Dfloor" ColumnName="Dfloor" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SenderPhone" ColumnName="SenderPhone" />
+          <ScalarProperty Name="InvoiceName" ColumnName="InvoiceName" />
+          <ScalarProperty Name="PhoneReceivesShippingPac" ColumnName="PhoneReceivesShippingPac" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="DuringSending" ColumnName="DuringSending" />
+          <ScalarProperty Name="Weigth" ColumnName="Weigth" />
+          <ScalarProperty Name="DateNow" ColumnName="DateNow" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CommendsPac" ColumnName="CommendsPac" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,264 @@
+
+#logo1 {
+    height: 15vh;
+}
+#logo2{
+    height: 10vh;
+ 
+}
+a {
+    color: slategrey;
+    font-size: 22px;
+}
+#map {    
+    height: 494px;
+    margin-top: -17vh;
+}
+svg {
+    color: #6f1342;
+}
+#location1 {
+    direction: rtl;
+    opacity: 0.8;
+    z-index: 3;
+    top: 25vh;
+    left: 80vw;
+}
+#location2 {
+    direction: rtl;
+    opacity: 0.8;
+    z-index: 3;
+    top: 64vh;
+    left: 30vw;
+}
+#location3 {
+    direction: rtl;
+    opacity: 0.8;
+    top: 15vh;
+    left: 43vw;
+}
+#location4 {
+    direction: rtl;
+    opacity: 0.8;
+    z-index: 3;
+    top: 10vh;
+    left: 17vw;
+}
+#car {
+    left: 44vw;
+    top: 26vh;
+}
+#motorcycle {
+    left: 31vw;
+    top: 25vh;
+}
+#truck {
+    left: 24vw;
+    top: 35vh;
+}
+#imageMotorcycle {
+    height: 9vh;
+    position: absolute;
+    animation-name: rightAnimation;
+    animation-duration: 7s;
+    animation-fill-mode: both;
+}
+#imageCar {
+    height: 9vh;
+    position: absolute;
+    animation-name: leftAnimation;
+    animation-duration: 7s;
+    animation-fill-mode: both;
+}
+#imageVi {
+    height: 9vh;
+    position: absolute;
+    animation-name: leftAnimation1;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+}
+#imageTruck {
+    height: 9vh;
+    position: absolute;
+    animation-name: dowenAnimation;
+    animation-duration: 7s;
+    animation-fill-mode: both;
+    
+ }
+ #b{
+    height: 19vh;
+    width: 50vw;
+    position: absolute;
+    animation-name:Animation1;
+    animation-duration: 15s;
+  }
+ #b1{
+    height: 19vh;
+    width: 50vw;
+    position: absolute;
+    animation-name:Animation2;
+    animation-duration: 15s;
+    animation-fill-mode: both;
+ }
+ @keyframes rightAnimation {
+    from {
+        right: 40px;
+    }
+    to {
+        right:370px;
+    }
+}
+@keyframes Animation1{
+    from {
+        top:20PX;
+        left:200px;
+     }
+    to {
+       top: 140PX;
+       left: 50px;
+     }
+}
+@keyframes Animation2{
+    from {
+        top:50PX;
+        left:300px;
+     }
+    to {
+       top: 140PX;
+       left: 50px;
+     }
+}
+@keyframes leftAnimation {
+    from {
+        left: 40px;
+    }
+
+    to {
+        left: 480px;
+    }
+}
+@keyframes leftAnimation1 {
+    from {
+        left: 20px;
+    }
+
+    to {
+        left: 1280px;
+    }
+}
+@keyframes dowenAnimation{
+    from {
+        top:30PX;
+        left:300px;
+     }
+    to {
+       top: 230PX;
+       left: 50px;
+     }
+}
+p{
+    font-size: 150%;
+    color:slategrey;
+    z-index: 4;
+    position: relative;
+    text-align: center;
+    width: 65vw;
+    margin-left: 18vw;
+    margin-top: 3vw;
+}
+#logo {
+    position: absolute;
+    opacity: 0.6;
+    margin-top: -19vh;
+    width: 58%;
+    margin-left: 25vw;
+}
+h1{ 
+     color: slategrey;
+}
+h3{ 
+    color: slategrey;
+}
+ 
+// li{
+//     color: slategrey;
+// }
+// #a{
+// position: absolute;
+// animation-name: leftAnimation1;
+// animation-duration: 10s;
+// animation-fill-mode: both;
+// }
+// #b{
+//     position: absolute;
+//     animation-name: leftAnimation2;
+//     animation-duration: 10s;
+//     animation-fill-mode: both;
+// } 
+// #c{
+//     position: absolute;
+//     animation-name: leftAnimation3;
+//     animation-duration: 10s;
+//     animation-fill-mode: both;
+//  }
+
+// #d{
+//     position: absolute;
+//     animation-name: leftAnimation4;
+//     animation-duration: 10s;
+//     animation-fill-mode: both;
+//  }
+
+// #e{
+//     position: absolute;
+//     animation-name: leftAnimation5;
+//     animation-duration: 10s;
+//     animation-fill-mode: both;
+// }
+                
+// @keyframes leftAnimation1 {
+//     from {
+//         left: 10px;
+//     }
+
+//     to {
+//         left: 1440px;
+//     }
+// }
+// @keyframes leftAnimation2 {
+//     from {
+//         left: 20px;
+//     }
+
+//     to {
+//         left: 1440px;
+//     }
+// }
+// @keyframes leftAnimation3 {
+//     from {
+//         left: 30px;
+//     }
+
+//     to {
+//         left: 1440px;
+//     }
+// }
+// @keyframes leftAnimation4 {
+//     from {
+//         left: 40px;
+//     }
+
+//     to {
+//         left: 1440px;
+//     }
+// }
+// @keyframes leftAnimation5 {
+//     from {
+//         left: 50px;
+//     }
+
+//     to {
+//         left: 1440px;
+//     }
+// }
+ 

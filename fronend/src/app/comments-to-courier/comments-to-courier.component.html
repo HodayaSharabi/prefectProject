@@ -1,0 +1,13 @@
+<h3>הארות והערות למשלוחנים</h3>
+<div *ngFor="let i of commentsList" class="mx-auto" style="display: inline-block;">
+    <div class="card d-flex flex-row bd-highlight mb-3" style="width: 18rem; text-align: center;">
+        <div class="card-body d-inline mx-auto mt-2 mb-3">
+            <p class="card-text" id="madeInShipingFront"><b>קוד חבילה:</b>
+                {{i.responseId}}</p>
+            <p class="card-text" id="madeInShipingFront"><b>שם מלא:</b> {{i.fullName}}</p>
+            <p class="card-text" id="madeInShipingFront"><b>פלאפון:</b> {{i.phone}}</p>
+            <p class="card-text " id="madeInShipingFront">{{i.email}} <b>:אמייל</b></p>
+            <p class="card-text" id="madeInShipingFront"><b>תגובה:</b> {{i.response}}</p>
+        </div>
+    </div>
+</div>

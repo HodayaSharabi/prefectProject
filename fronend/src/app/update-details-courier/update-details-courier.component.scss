@@ -1,0 +1,25 @@
+input {
+    border-radius: 18%;
+    border-color:#6f1342;
+    display: block;
+    margin-top: 1%;
+    padding: 2%;
+    font-size: 120%;
+     height: 2vh;
+    text-align: center;
+    margin-left: 34vw;
+    background-color: initial;
+}
+#logo {
+    position: absolute;
+    opacity: 0.4;
+    margin-top:-115vh;
+    width: 48%;
+    margin-left:30vw;
+    z-index: -2;
+}
+label{
+    direction: rtl;
+    position: absolute;
+}
+ 

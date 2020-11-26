@@ -1,0 +1,25 @@
+* {
+    text-align: center;
+}
+p {
+    margin: 2%;
+    font-size: 250%;
+    color: darkslategreyף
+}
+input {
+    margin: 2%;
+    width: 15%;
+}
+#logo {
+    position: absolute;
+    opacity: 0.4;
+    margin-top: -51vh;
+    width: 58%;
+    direction: rtl;
+    right: 14vw;
+    z-index: -2;
+}
+#ReturnToHomePage {
+    color: grey;
+    margin:2vw;
+}

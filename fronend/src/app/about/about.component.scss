@@ -1,0 +1,25 @@
+#logo {
+    position: absolute;
+    opacity: 0.4;
+    margin-top: -78vh;
+    width: 58%;
+    margin-left: 25vw;
+}
+#carousel-item,#carousel-item active {
+    height: 5% !important;
+
+}
+p{
+    font-size: 150%;
+    color: lightgrey;
+    z-index: 4;
+    position: relative;
+    text-align: center;
+    width: 65vw;
+    margin-left: 18vw;
+    margin-top: 3vw;
+}
+#ReturnToHomePage {
+    color: grey;
+    margin:2vw;
+}

@@ -1,0 +1,38 @@
+* {
+    text-align: center;
+    // direction: unset;
+}
+p {
+    margin: 2%;
+    font-size: 250%;
+    color: darkslategrey;
+}
+h2 {
+    font-size: 100%;
+    text-align: center;
+}
+input {
+    margin: auto;
+    direction: rtl;
+    margin-top: 1%;
+}
+select {
+    width: 15vw;
+    margin: auto;
+    margin-top: 2.5vh;
+}
+#logo {
+    position: absolute;
+    opacity: 0.4;
+    margin-top: -83vh;
+    width: 58%;
+    margin-left: 26vw;
+    z-index: -2;
+}
+#ReturnToHomePage {
+    color: grey;
+    margin:2vw;
+}
+#form {
+    margin-top: -7vw;
+}

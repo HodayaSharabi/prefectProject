@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CourierCompanyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Coment">
+    <Key>
+      <PropertyRef Name="ResponseId" />
+    </Key>
+    <Property Name="ResponseId" Type="Int32" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Response" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="FullName" />
+    </Key>
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TheCauseOfReferral" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CourierPackage">
+    <Key>
+      <PropertyRef Name="CourierId" />
+    </Key>
+    <Property Name="CourierId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CourierPackageId" Type="Int32" />
+    <Property Name="PackageId" Type="Int32" />
+    <Property Name="DateCollect" Type="DateTime" Precision="0" />
+    <Property Name="DateBring" Type="DateTime" Precision="0" />
+    <Property Name="DateNow" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Couriers">
+    <Key>
+      <PropertyRef Name="CourierId" />
+    </Key>
+    <Property Name="CourierId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PersonalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CourierTz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="TypeOfTransport" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CouriersComments">
+    <Key>
+      <PropertyRef Name="ResponseId" />
+    </Key>
+    <Property Name="ResponseId" Type="Int32" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Response" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CourierId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="CustomerPersonalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerTz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="MadeShipments">
+    <Key>
+      <PropertyRef Name="PackageId" />
+    </Key>
+    <Property Name="PackageId" Type="Int32" Nullable="false" />
+    <Property Name="CustomerId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CollectionAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cfloor" Type="Int32" />
+    <Property Name="Destination" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Dfloor" Type="Int32" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SenderPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneReceivesShipping" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DuringSending" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Weigth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateNow" Type="DateTime" Precision="0" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Commends" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PackageAddress">
+    <Key>
+      <PropertyRef Name="IdAddress" />
+    </Key>
+    <Property Name="IdAddress" Type="Int32" Nullable="false" />
+    <Property Name="IdPackage" Type="Int32" />
+    <Property Name="SourcePackageLon" Type="Int32" />
+    <Property Name="SourcePackageLat" Type="Int32" />
+    <Property Name="DestinetionPackageLon" Type="Int32" />
+    <Property Name="DestinationPackageLat" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Packages">
+    <Key>
+      <PropertyRef Name="PackageId" />
+    </Key>
+    <Property Name="PackageId" Type="Int32" Nullable="false" />
+    <Property Name="CollectionAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cfloor" Type="Int32" />
+    <Property Name="Destination" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Dfloor" Type="Int32" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SenderPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneReceivesShippingPac" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DuringSending" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Weigth" Type="Int32" />
+    <Property Name="DateNow" Type="DateTime" Precision="0" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CommendsPac" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="CourierCompanyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Coment" EntityType="Self.Coment" />
+    <EntitySet Name="Contact" EntityType="Self.Contact" />
+    <EntitySet Name="CourierPackage" EntityType="Self.CourierPackage" />
+    <EntitySet Name="Couriers" EntityType="Self.Couriers" />
+    <EntitySet Name="CouriersComments" EntityType="Self.CouriersComments" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" />
+    <EntitySet Name="MadeShipments" EntityType="Self.MadeShipments" />
+    <EntitySet Name="PackageAddress" EntityType="Self.PackageAddress" />
+    <EntitySet Name="Packages" EntityType="Self.Packages" />
+  </EntityContainer>
+</Schema>

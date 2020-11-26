@@ -1,0 +1,43 @@
+<!-- <p>my-shipments works!</p>  -->
+
+<div>
+    <!-- LogIn איך מקבלים את קוד המשתמש שנשמר ב  -->
+    <!-- (click)="EnterToShipingDetails(i)" -->
+    <!-- <div *ngFor="let i of packages">
+        <p id="madeInShipingFront">משלוח בתאריך: {{i.dateNow}} תאור: {{i.description}} סטטוס משלוח: {{i.status}}</p>
+        <div id="madeInShipingBack">
+            <p class="ShowMadeShipments">כתובת איסוף: {{i.collectionAddress}}</p>
+            <p class="ShowMadeShipments">כתובת יעד: {{i.destination}}</p>
+            <p class="ShowMadeShipments">טלפון מקבל המשלוח: {{i.phoneReceivesShipping}}</p>
+            <p class="ShowMadeShipments">שם חברה: {{i.companyName}}</p>
+            <p class="ShowMadeShipments">תאריך משלוח: {{i.dateNow}}</p>
+            <p class="ShowMadeShipments">תאור: {{i.description}}</p>
+            <p class="ShowMadeShipments">הערות: {{i.commends}}</p>
+            <p class="ShowMadeShipments">סטטוס: {{i.status}}</p>
+        </div>
+    </div> -->
+</div>
+<div *ngFor="let i of packages" style="display: inline;">
+    <div class="card" style="width: 18rem; text-align: center;">
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+            <p class="card-text" id="madeInShipingFront">משלוח בתאריך: {{i.dateNow}}</p>
+            <p class="card-text" id="madeInShipingFront">תאור: {{i.description}}</p>
+            <p class="card-text" id="madeInShipingFront">סטטוס משלוח: {{i.status}}</p>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body" *ngFor="let i of packages">
+        <p class="card-text ShowMadeShipments">כתובת איסוף: {{i.collectionAddress}}</p>
+        <p class="card-text ShowMadeShipments">כתובת יעד: {{i.destination}}</p>
+        <p class="card-text ShowMadeShipments">טלפון מקבל המשלוח: {{i.phoneReceivesShipping}}</p>
+        <p class="card-text ShowMadeShipments">שם חברה: {{i.companyName}}</p>
+        <p class="card-text ShowMadeShipments">תאריך משלוח: {{i.dateNow}}</p>
+        <p class="card-text ShowMadeShipments">תאור: {{i.description}}</p>
+        <p class="card-text ShowMadeShipments">הערות: {{i.commends}}</p>
+        <p class="card-text ShowMadeShipments">סטטוס: {{i.status}}</p>
+    </div>
+</div> -->

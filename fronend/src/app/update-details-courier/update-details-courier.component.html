@@ -1,0 +1,16 @@
+<div>
+    <div id="updateDiv" [style.z-index]="3">
+        <input type="text" name="PersonalCode" placeholder="קוד אישי" [(ngModel)]="upDateDetails.courierPersonalCode">
+        <input type="text" name="Tz" placeholder="תעודת זהות" [(ngModel)]="upDateDetails.courierTz">
+        <input type="text" name="firstName" placeholder="שם פרטי" [(ngModel)]="upDateDetails.courierFirstName">
+        <input type="text" name="LastName" placeholder="שם משפחה" [(ngModel)]="upDateDetails.courierLastName">
+        <input type="text" name="Address" placeholder="כתובת" [(ngModel)]="upDateDetails.courierAddress">
+        <input type="text" name="City" placeholder="עיר" [(ngModel)]="upDateDetails.courierCity">
+        <input type="text" name="Phone" placeholder="פלאפון" [(ngModel)]="upDateDetails.courierPhone">
+        <input type="text" name="Status" placeholder="מצב" [(ngModel)]="upDateDetails.courierStatus">
+        <input type="text" name="TypeOfTransport" placeholder="סוג רכב"
+            [(ngModel)]="upDateDetails.courierTypeOfTransport">
+        <input type="submit" (click)="upDateCouriersDetails()">
+    </div>
+    <img id="logo" src="../../assets/logoDoarim.png" alt="">
+</div>

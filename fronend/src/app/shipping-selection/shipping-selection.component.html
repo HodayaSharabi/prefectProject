@@ -1,0 +1,13 @@
+<h3>בחירת משלוח</h3>
+<div *ngFor="let i of packages" class="mx-auto" style="display: inline-block;">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body d-inline mx-auto mt-2 mb-3">
+            <p class="card-text">קוד משלוח: {{i.packageIdPac}}</p>
+            <p class="card-text">כתובת איסוף: {{i.collectionAddressPac}}</p>
+            <p class="card-text">כתובת יעד: {{i.destinationPac}}</p>
+            <p class="card-text">משקל: {{i.weigthPac}}</p>
+            <button class="btn btn-secondary">בחר משלוח יחיד</button>
+        </div>
+        <!-- (click)="SelectPackage()" -->
+    </div>
+</div>

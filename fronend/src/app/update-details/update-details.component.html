@@ -1,0 +1,14 @@
+<!-- <p>update-details works!</p> -->
+<div>
+    <!-- <input type="text" class="input-group-text" name="personalCode" placeholder="{{i.personalCode}}" >
+     <input type="text" class="input-group-text" name="courierTz" placeholder="תעודת זהות > -->
+    <div id="div1">
+        <input type="text" name="personalCode" placeholder="קוד אישי" [(ngModel)]="upDateDetails.customerPersonalCode">
+        <input type="text" name="firstName" placeholder="שם פרטי" [(ngModel)]="upDateDetails.customerFirstName">
+        <input type="text" name="lastName" placeholder="שם משפחה" [(ngModel)]="upDateDetails.customerLastName">
+        <input type="text" name="address" placeholder="כתובת" [(ngModel)]="upDateDetails.customerAddress">
+        <input type="text" name="city" placeholder="עיר" [(ngModel)]="upDateDetails.customerCity">
+        <input type="text" name="phone" placeholder="פלאפון" [(ngModel)]="upDateDetails.customerPhone">
+        <input id="submit" type="submit" (click)="upDateCouriersDetails()">
+    </div>
+</div>

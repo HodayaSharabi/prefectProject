@@ -1,0 +1,18 @@
+<!-- <p>comments-and-illuminations works!</p> -->
+<!-- המנהל מקבל תגובות מהלקוחות -->
+<!-- *ngFor="let i of packages" -->
+<h3> הערות והארות</h3>
+<br>
+<div id="a">
+    <div *ngFor="let i of comments" style="display: inline-block;">
+        <div class="card" style="width: 18rem; text-align: center;">
+            <div class="card-body">
+                <p class="card-text" id="madeInShipingFront">מספר משלוח: {{i.responseId}}</p>
+                <p class="card-text" id="madeInShipingFront">שם לקוח: {{i.fullName}}</p>
+                <p class="card-text" id="madeInShipingFront">פלאפון: {{i.phone}}</p>
+                <p class="card-text" id="madeInShipingFront">מייל: {{i.email}}</p>
+                <p class="card-text" id="madeInShipingFront">תגובת הלקוח: {{i.response}}</p>
+            </div>
+        </div>
+    </div>
+</div>
