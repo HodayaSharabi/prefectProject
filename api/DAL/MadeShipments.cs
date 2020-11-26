@@ -15,7 +15,7 @@ namespace DAL
     public partial class MadeShipments
     {
         public int PackageId { get; set; }
-        public string CustomerId { get; set; }
+        public int CustomerId { get; set; }
         public string CollectionAddress { get; set; }
         public Nullable<int> Cfloor { get; set; }
         public string Destination { get; set; }

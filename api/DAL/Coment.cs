@@ -14,10 +14,10 @@ namespace DAL
     
     public partial class Coment
     {
-        public int ResponseId { get; set; }
-        public string FullName { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
-        public string Response { get; set; }
+        public int responseId { get; set; }
+        public string fullName { get; set; }
+        public string phone { get; set; }
+        public string email { get; set; }
+        public string response { get; set; }
     }
 }

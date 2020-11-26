@@ -14,7 +14,7 @@ namespace BL
 
         public static List<MadeShipments> GetMyShipment(int customerId)
         {
-            var MS = db.MadeShipments.Where(x => x.CustomerId == customerId.ToString()).ToList();
+            var MS = db.MadeShipments.Where(x => x.CustomerId == customerId).ToList();
             return MS;
 
         }

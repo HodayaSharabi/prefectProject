@@ -8,7 +8,7 @@ namespace Dto
 {
     public class CourierPackageDTO
     {
-        public string CourierId { get; set; }
+        public int CourierId { get; set; }
         public Nullable<int> CourierPackageId { get; set; }
         public Nullable<int> PackageId { get; set; }
         public Nullable<System.DateTime> DateCollect { get; set; }

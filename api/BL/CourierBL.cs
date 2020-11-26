@@ -19,13 +19,13 @@ namespace BL
 
         public static CourierDTO Login(string CourierCode)
         {
-            var courier = db.Couriers.FirstOrDefault(p => p.PersonalCode == CourierCode && p.Status == 1);
+            var courier = db.Couriers.FirstOrDefault(p => p.CourierPersonalCode == CourierCode && p.CourierStatus == 1);
             return CourierDTO.ConvertDto(courier);
         }
 
         public static CourierDTO ManagerLogin(string ManagerCode)
         {
-            var manager = db.Couriers.FirstOrDefault(p => p.PersonalCode == ManagerCode && p.Status == 2);
+            Couriers manager = db.Couriers.FirstOrDefault(p => p.CourierPersonalCode == ManagerCode && p.CourierStatus == 2);
             return CourierDTO.ConvertDto(manager);
         }
 
@@ -47,15 +47,15 @@ namespace BL
         public static bool UpdatePersonalDetails(Couriers courier)
         {
             var courierDetail = db.Couriers.FirstOrDefault(p => p.CourierTz == courier.CourierTz);
-            courierDetail.Address = courier.Address;
-            courierDetail.City = courier.City;
-            courierDetail.FirstName = courier.FirstName;
+            courierDetail.CourierAddress = courier.CourierAddress;
+            courierDetail.CourierCity = courier.CourierCity;
+            courierDetail.CourierFirstName = courier.CourierFirstName;
             courierDetail.CourierId = courier.CourierId;
             //courierDetail.pa = courier.CourierPackage;
-            courierDetail.PersonalCode = courier.PersonalCode;
-            courierDetail.Phone = courier.Phone;
-            courierDetail.Status = courier.Status;
-            courierDetail.TypeOfTransport = courier.TypeOfTransport;
+            courierDetail.CourierPersonalCode = courier.CourierPersonalCode;
+            courierDetail.CourierPhone = courier.CourierPhone;
+            courierDetail.CourierStatus = courier.CourierStatus;
+            courierDetail.CourierTypeOfTransport = courier.CourierTypeOfTransport;
 
             db.SaveChanges();
             return true;

@@ -15,7 +15,7 @@ namespace DAL
     public partial class PackageAddress
     {
         public int IdAddress { get; set; }
-        public Nullable<int> IdPackage { get; set; }
+        public int IdPackage { get; set; }
         public Nullable<int> SourcePackageLon { get; set; }
         public Nullable<int> SourcePackageLat { get; set; }
         public Nullable<int> DestinetionPackageLon { get; set; }

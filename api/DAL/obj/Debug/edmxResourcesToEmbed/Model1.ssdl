@@ -2,30 +2,32 @@
 <Schema Namespace="CourierCompanyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Coment">
     <Key>
-      <PropertyRef Name="ResponseId" />
+      <PropertyRef Name="responseId" />
     </Key>
-    <Property Name="ResponseId" Type="int" Nullable="false" />
-    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
-    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
-    <Property Name="Email" Type="nvarchar" MaxLength="50" />
-    <Property Name="Response" Type="nvarchar" MaxLength="50" />
+    <Property Name="responseId" Type="int" Nullable="false" />
+    <Property Name="fullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="response" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Contact">
     <Key>
-      <PropertyRef Name="FullName" />
+      <PropertyRef Name="Email" />
     </Key>
     <Property Name="FullName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Phone" Type="nvarchar" MaxLength="50" />
-    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="TheCauseOfReferral" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="CourierPackage">
     <Key>
       <PropertyRef Name="CourierId" />
+      <PropertyRef Name="CourierPackageId" />
+      <PropertyRef Name="PackageId" />
     </Key>
-    <Property Name="CourierId" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="CourierPackageId" Type="int" />
-    <Property Name="PackageId" Type="int" />
+    <Property Name="CourierId" Type="int" Nullable="false" />
+    <Property Name="CourierPackageId" Type="int" Nullable="false" />
+    <Property Name="PackageId" Type="int" Nullable="false" />
     <Property Name="DateCollect" Type="date" />
     <Property Name="DateBring" Type="date" />
     <Property Name="DateNow" Type="date" />
@@ -34,34 +36,35 @@
     <Key>
       <PropertyRef Name="CourierId" />
     </Key>
-    <Property Name="CourierId" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="PersonalCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CourierId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CourierPersonalCode" Type="nvarchar" MaxLength="50" />
     <Property Name="CourierTz" Type="nvarchar" MaxLength="50" />
-    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
-    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
-    <Property Name="Address" Type="nvarchar" MaxLength="50" />
-    <Property Name="City" Type="nvarchar" MaxLength="50" />
-    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
-    <Property Name="Status" Type="int" />
-    <Property Name="TypeOfTransport" Type="int" />
+    <Property Name="CourierFirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CourierLastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CourierAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="CourierCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="CourierPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="CourierStatus" Type="int" />
+    <Property Name="CourierTypeOfTransport" Type="int" />
   </EntityType>
   <EntityType Name="CouriersComments">
     <Key>
       <PropertyRef Name="ResponseId" />
+      <PropertyRef Name="CourierId" />
     </Key>
     <Property Name="ResponseId" Type="int" Nullable="false" />
     <Property Name="FullName" Type="nvarchar" MaxLength="50" />
     <Property Name="Phone" Type="nvarchar" MaxLength="50" />
     <Property Name="Email" Type="nvarchar" MaxLength="50" />
     <Property Name="Response" Type="nvarchar" MaxLength="50" />
-    <Property Name="CourierId" Type="int" />
+    <Property Name="CourierId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Customers">
     <Key>
       <PropertyRef Name="CustomerId" />
     </Key>
-    <Property Name="CustomerId" Type="int" Nullable="false" />
-    <Property Name="CustomerPersonalCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerPersonalCode" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="CustomerTz" Type="nvarchar" MaxLength="50" />
     <Property Name="CustomerFirstName" Type="nvarchar" MaxLength="50" />
     <Property Name="CustomerLastName" Type="nvarchar" MaxLength="50" />
@@ -73,9 +76,10 @@
   <EntityType Name="MadeShipments">
     <Key>
       <PropertyRef Name="PackageId" />
+      <PropertyRef Name="CustomerId" />
     </Key>
     <Property Name="PackageId" Type="int" Nullable="false" />
-    <Property Name="CustomerId" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
     <Property Name="CollectionAddress" Type="nvarchar" MaxLength="50" />
     <Property Name="Cfloor" Type="int" />
     <Property Name="Destination" Type="nvarchar" MaxLength="50" />
@@ -98,9 +102,10 @@
   <EntityType Name="PackageAddress">
     <Key>
       <PropertyRef Name="IdAddress" />
+      <PropertyRef Name="IdPackage" />
     </Key>
     <Property Name="IdAddress" Type="int" Nullable="false" />
-    <Property Name="IdPackage" Type="int" />
+    <Property Name="IdPackage" Type="int" Nullable="false" />
     <Property Name="SourcePackageLon" Type="int" />
     <Property Name="SourcePackageLat" Type="int" />
     <Property Name="DestinetionPackageLon" Type="int" />
@@ -110,7 +115,7 @@
     <Key>
       <PropertyRef Name="PackageId" />
     </Key>
-    <Property Name="PackageId" Type="int" Nullable="false" />
+    <Property Name="PackageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CollectionAddress" Type="nvarchar" MaxLength="50" />
     <Property Name="Cfloor" Type="int" />
     <Property Name="Destination" Type="nvarchar" MaxLength="50" />
@@ -130,12 +135,67 @@
     <Property Name="CommendsPac" Type="nvarchar" MaxLength="50" />
     <Property Name="Status" Type="nvarchar" MaxLength="50" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6013: The table/view 'CourierCompany.dbo.PackagesToCouriers' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="PackagesToCouriers">
-          <Property Name="CourierCode" Type="nvarchar" MaxLength="50" />
-          <Property Name="PackageCode" Type="nvarchar" MaxLength="50" />
-        </EntityType>-->
+  <EntityType Name="PackagesToCouriers">
+    <Key>
+      <PropertyRef Name="CourierCode" />
+      <PropertyRef Name="PackageCode" />
+    </Key>
+    <Property Name="CourierCode" Type="int" Nullable="false" />
+    <Property Name="PackageCode" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_PackagesToCouriers_Packages">
+    <End Role="Packages" Type="Self.Packages" Multiplicity="1" />
+    <End Role="PackagesToCouriers" Type="Self.PackagesToCouriers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Packages">
+        <PropertyRef Name="PackageId" />
+      </Principal>
+      <Dependent Role="PackagesToCouriers">
+        <PropertyRef Name="PackageCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="CourierCompanyModelStoreContainer">
     <EntitySet Name="Coment" EntityType="Self.Coment" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
@@ -146,5 +206,11 @@ warning 6013: The table/view 'CourierCompany.dbo.PackagesToCouriers' does not ha
     <EntitySet Name="MadeShipments" EntityType="Self.MadeShipments" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PackageAddress" EntityType="Self.PackageAddress" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Packages" EntityType="Self.Packages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PackagesToCouriers" EntityType="Self.PackagesToCouriers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_PackagesToCouriers_Packages" Association="Self.FK_PackagesToCouriers_Packages">
+      <End Role="Packages" EntitySet="Packages" />
+      <End Role="PackagesToCouriers" EntitySet="PackagesToCouriers" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

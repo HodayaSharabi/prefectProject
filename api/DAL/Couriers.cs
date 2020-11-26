@@ -14,15 +14,15 @@ namespace DAL
     
     public partial class Couriers
     {
-        public string CourierId { get; set; }
-        public string PersonalCode { get; set; }
+        public int CourierId { get; set; }
+        public string CourierPersonalCode { get; set; }
         public string CourierTz { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Address { get; set; }
-        public string City { get; set; }
-        public string Phone { get; set; }
-        public Nullable<int> Status { get; set; }
-        public Nullable<int> TypeOfTransport { get; set; }
+        public string CourierFirstName { get; set; }
+        public string CourierLastName { get; set; }
+        public string CourierAddress { get; set; }
+        public string CourierCity { get; set; }
+        public string CourierPhone { get; set; }
+        public Nullable<int> CourierStatus { get; set; }
+        public Nullable<int> CourierTypeOfTransport { get; set; }
     }
 }

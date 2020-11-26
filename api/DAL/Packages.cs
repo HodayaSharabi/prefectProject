@@ -14,6 +14,12 @@ namespace DAL
     
     public partial class Packages
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Packages()
+        {
+            this.PackagesToCouriers = new HashSet<PackagesToCouriers>();
+        }
+    
         public int PackageId { get; set; }
         public string CollectionAddress { get; set; }
         public Nullable<int> Cfloor { get; set; }
@@ -33,5 +39,8 @@ namespace DAL
         public string Description { get; set; }
         public string CommendsPac { get; set; }
         public string Status { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PackagesToCouriers> PackagesToCouriers { get; set; }
     }
 }

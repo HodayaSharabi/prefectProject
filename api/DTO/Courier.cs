@@ -8,17 +8,16 @@ namespace Dto
 {
     public class CourierDTO
     {
-
-        public string CourierId { get; set; }
-        public string PersonalCode { get; set; }
+        public int CourierId { get; set; }
+        public string CourierPersonalCode { get; set; }
         public string CourierTz { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Address { get; set; }
-        public string City { get; set; }
-        public string Phone { get; set; }
-        public Nullable<int> Status { get; set; }
-        public Nullable<int> TypeOfTransport { get; set; }
+        public string CourierFirstName { get; set; }
+        public string CourierLastName { get; set; }
+        public string CourierAddress { get; set; }
+        public string CourierCity { get; set; }
+        public string CourierPhone { get; set; }
+        public Nullable<int> CourierStatus { get; set; }
+        public Nullable<int> CourierTypeOfTransport { get; set; }
 
         //public static Dal.Courier_TBL ConvertDal(Courier c)
         //{
@@ -32,15 +31,15 @@ namespace Dto
             return new CourierDTO()
             {
                 CourierId = c.CourierId,
-                PersonalCode = c.PersonalCode,
+                CourierPersonalCode = c.CourierPersonalCode,
                 CourierTz = c.CourierTz,
-                FirstName = c.FirstName,
-                LastName = c.LastName,
-                Address = c.Address,
-                City = c.City,
-                Phone = c.Phone,
-                Status = c.Status,
-                TypeOfTransport = c.TypeOfTransport,
+                CourierFirstName = c.CourierFirstName,
+                CourierLastName = c.CourierLastName,
+                CourierAddress = c.CourierAddress,
+                CourierCity = c.CourierCity,
+                CourierPhone = c.CourierPhone,
+                CourierStatus = c.CourierStatus,
+                CourierTypeOfTransport = c.CourierTypeOfTransport,
             };
         }
         public static List<CourierDTO> ListToDTO(List<Couriers> list)

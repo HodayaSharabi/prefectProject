@@ -1,12 +1,11 @@
-C:\Users\User\Desktop\פרויקט גמר\Server\ShipmentsCompany\DAL\bin\Debug\DAL.dll.config
-C:\Users\User\Desktop\פרויקט גמר\Server\ShipmentsCompany\DAL\bin\Debug\DAL.dll
-C:\Users\User\Desktop\פרויקט גמר\Server\ShipmentsCompany\DAL\bin\Debug\DAL.pdb
-C:\Users\User\Desktop\פרויקט גמר\Server\ShipmentsCompany\DAL\bin\Debug\EntityFramework.dll
-C:\Users\User\Desktop\פרויקט גמר\Server\ShipmentsCompany\DAL\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\User\Desktop\פרויקט גמר\Server\ShipmentsCompany\DAL\bin\Debug\EntityFramework.xml
-C:\Users\User\Desktop\פרויקט גמר\Server\ShipmentsCompany\DAL\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\User\Desktop\פרויקט גמר\Server\ShipmentsCompany\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
-C:\Users\User\Desktop\פרויקט גמר\Server\ShipmentsCompany\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\פרויקט גמר\Server\ShipmentsCompany\DAL\obj\Debug\DAL.csproj.CopyComplete
-C:\Users\User\Desktop\פרויקט גמר\Server\ShipmentsCompany\DAL\obj\Debug\DAL.dll
-C:\Users\User\Desktop\פרויקט גמר\Server\ShipmentsCompany\DAL\obj\Debug\DAL.pdb
+C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DAL\bin\Debug\DAL.dll.config
+C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DAL\bin\Debug\DAL.dll
+C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DAL\bin\Debug\DAL.pdb
+C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DAL\obj\Debug\DAL.dll
+C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DAL\obj\Debug\DAL.pdb

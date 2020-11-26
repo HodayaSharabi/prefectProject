@@ -14,9 +14,9 @@ namespace DAL
     
     public partial class CourierPackage
     {
-        public string CourierId { get; set; }
-        public Nullable<int> CourierPackageId { get; set; }
-        public Nullable<int> PackageId { get; set; }
+        public int CourierId { get; set; }
+        public int CourierPackageId { get; set; }
+        public int PackageId { get; set; }
         public Nullable<System.DateTime> DateCollect { get; set; }
         public Nullable<System.DateTime> DateBring { get; set; }
         public Nullable<System.DateTime> DateNow { get; set; }

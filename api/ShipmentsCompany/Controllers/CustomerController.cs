@@ -45,7 +45,7 @@ namespace CourierProject.Controllers
         }
         [Route("GetContactFile")]
         [HttpPost]
-        public bool GetContactFile(Contact contactFile)
+        public bool postContactFile([FromBody]Contact contactFile)
         {
             return BL.CustomerBL.getContactFile(contactFile);
         }

@@ -31,10 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DAL\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DAL\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -59,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{15cc7caa-bf7c-4c5e-b410-01f48d6cb1d5}</Project>
+      <Project>{81f4c2ea-3bac-4ad2-bd7b-f70d295252a2}</Project>
       <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">

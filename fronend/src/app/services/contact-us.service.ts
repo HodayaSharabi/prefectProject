@@ -10,6 +10,7 @@ export class
   constructor(public httpClient: HttpClient) { }
 
   Insert(contactFile) {
+    console.log(contactFile)
     return this.httpClient.post("http://localhost:54216/api/Customer/GetContactFile", contactFile);
   }
 

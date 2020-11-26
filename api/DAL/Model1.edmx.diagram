@@ -4,16 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f7d3831754644f44a90c14b3e2b039f9" Name="Diagram1">
-        <EntityTypeShape EntityType="CourierCompanyModel.Coment" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CourierCompanyModel.Contact" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CourierCompanyModel.CourierPackage" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CourierCompanyModel.Couriers" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CourierCompanyModel.CouriersComments" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CourierCompanyModel.Customers" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CourierCompanyModel.MadeShipments" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CourierCompanyModel.PackageAddress" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CourierCompanyModel.Packages" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+      <Diagram DiagramId="d46b4597f5544055988c4657cf218db2" Name="Diagram1" ZoomLevel="58">
+        <EntityTypeShape EntityType="CourierCompanyModel.Coment" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierCompanyModel.Contact" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierCompanyModel.CourierPackage" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierCompanyModel.Couriers" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierCompanyModel.CouriersComments" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierCompanyModel.Customers" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierCompanyModel.MadeShipments" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierCompanyModel.PackageAddress" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierCompanyModel.Packages" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierCompanyModel.PackagesToCouriers" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CourierCompanyModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="CourierCompanyModel.FK_PackagesToCouriers_Packages" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

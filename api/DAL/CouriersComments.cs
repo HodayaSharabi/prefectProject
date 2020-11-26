@@ -19,6 +19,6 @@ namespace DAL
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Response { get; set; }
-        public Nullable<int> CourierId { get; set; }
+        public int CourierId { get; set; }
     }
 }

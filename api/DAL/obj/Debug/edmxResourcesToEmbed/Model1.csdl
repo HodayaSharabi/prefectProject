@@ -2,30 +2,32 @@
 <Schema Namespace="CourierCompanyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Coment">
     <Key>
-      <PropertyRef Name="ResponseId" />
+      <PropertyRef Name="responseId" />
     </Key>
-    <Property Name="ResponseId" Type="Int32" Nullable="false" />
-    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Response" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="responseId" Type="Int32" Nullable="false" />
+    <Property Name="fullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="response" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Contact">
     <Key>
-      <PropertyRef Name="FullName" />
+      <PropertyRef Name="Email" />
     </Key>
     <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="TheCauseOfReferral" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="CourierPackage">
     <Key>
       <PropertyRef Name="CourierId" />
+      <PropertyRef Name="CourierPackageId" />
+      <PropertyRef Name="PackageId" />
     </Key>
-    <Property Name="CourierId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="CourierPackageId" Type="Int32" />
-    <Property Name="PackageId" Type="Int32" />
+    <Property Name="CourierId" Type="Int32" Nullable="false" />
+    <Property Name="CourierPackageId" Type="Int32" Nullable="false" />
+    <Property Name="PackageId" Type="Int32" Nullable="false" />
     <Property Name="DateCollect" Type="DateTime" Precision="0" />
     <Property Name="DateBring" Type="DateTime" Precision="0" />
     <Property Name="DateNow" Type="DateTime" Precision="0" />
@@ -34,34 +36,35 @@
     <Key>
       <PropertyRef Name="CourierId" />
     </Key>
-    <Property Name="CourierId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="PersonalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CourierId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CourierPersonalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="CourierTz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Status" Type="Int32" />
-    <Property Name="TypeOfTransport" Type="Int32" />
+    <Property Name="CourierFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CourierLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CourierAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CourierCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CourierPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CourierStatus" Type="Int32" />
+    <Property Name="CourierTypeOfTransport" Type="Int32" />
   </EntityType>
   <EntityType Name="CouriersComments">
     <Key>
       <PropertyRef Name="ResponseId" />
+      <PropertyRef Name="CourierId" />
     </Key>
     <Property Name="ResponseId" Type="Int32" Nullable="false" />
     <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Response" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="CourierId" Type="Int32" />
+    <Property Name="CourierId" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="Customers">
     <Key>
       <PropertyRef Name="CustomerId" />
     </Key>
-    <Property Name="CustomerId" Type="Int32" Nullable="false" />
-    <Property Name="CustomerPersonalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerPersonalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="CustomerTz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="CustomerFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="CustomerLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -73,9 +76,10 @@
   <EntityType Name="MadeShipments">
     <Key>
       <PropertyRef Name="PackageId" />
+      <PropertyRef Name="CustomerId" />
     </Key>
     <Property Name="PackageId" Type="Int32" Nullable="false" />
-    <Property Name="CustomerId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
     <Property Name="CollectionAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Cfloor" Type="Int32" />
     <Property Name="Destination" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -98,9 +102,10 @@
   <EntityType Name="PackageAddress">
     <Key>
       <PropertyRef Name="IdAddress" />
+      <PropertyRef Name="IdPackage" />
     </Key>
     <Property Name="IdAddress" Type="Int32" Nullable="false" />
-    <Property Name="IdPackage" Type="Int32" />
+    <Property Name="IdPackage" Type="Int32" Nullable="false" />
     <Property Name="SourcePackageLon" Type="Int32" />
     <Property Name="SourcePackageLat" Type="Int32" />
     <Property Name="DestinetionPackageLon" Type="Int32" />
@@ -110,7 +115,7 @@
     <Key>
       <PropertyRef Name="PackageId" />
     </Key>
-    <Property Name="PackageId" Type="Int32" Nullable="false" />
+    <Property Name="PackageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CollectionAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Cfloor" Type="Int32" />
     <Property Name="Destination" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -129,7 +134,39 @@
     <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="CommendsPac" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PackagesToCouriers" Relationship="Self.FK_PackagesToCouriers_Packages" FromRole="Packages" ToRole="PackagesToCouriers" />
   </EntityType>
+  <EntityType Name="PackagesToCouriers">
+    <Key>
+      <PropertyRef Name="CourierCode" />
+      <PropertyRef Name="PackageCode" />
+    </Key>
+    <Property Name="CourierCode" Type="Int32" Nullable="false" />
+    <Property Name="PackageCode" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Packages" Relationship="Self.FK_PackagesToCouriers_Packages" FromRole="PackagesToCouriers" ToRole="Packages" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_PackagesToCouriers_Packages">
+    <End Role="Packages" Type="Self.Packages" Multiplicity="1" />
+    <End Role="PackagesToCouriers" Type="Self.PackagesToCouriers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Packages">
+        <PropertyRef Name="PackageId" />
+      </Principal>
+      <Dependent Role="PackagesToCouriers">
+        <PropertyRef Name="PackageCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="CourierCompanyEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Coment" EntityType="Self.Coment" />
     <EntitySet Name="Contact" EntityType="Self.Contact" />
@@ -140,5 +177,52 @@
     <EntitySet Name="MadeShipments" EntityType="Self.MadeShipments" />
     <EntitySet Name="PackageAddress" EntityType="Self.PackageAddress" />
     <EntitySet Name="Packages" EntityType="Self.Packages" />
+    <EntitySet Name="PackagesToCouriers" EntityType="Self.PackagesToCouriers" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_PackagesToCouriers_Packages" Association="Self.FK_PackagesToCouriers_Packages">
+      <End Role="Packages" EntitySet="Packages" />
+      <End Role="PackagesToCouriers" EntitySet="PackagesToCouriers" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(CourierCompanyModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(CourierCompanyModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
 </Schema>
