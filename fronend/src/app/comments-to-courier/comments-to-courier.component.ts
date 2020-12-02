@@ -11,14 +11,14 @@ import { Router } from '@angular/router';
 
 export class CommentsToCourierComponent implements OnInit {
 
-  courier: Couriers;
+  courier: any;
   commentsList: CouriersComments[] = [];
 
   constructor(public courierCommentsService: CourierCommentsService, public router: Router) { }
 
   ngOnInit(): void {
     this.courier = JSON.parse(localStorage.getItem("courier"));
-    this.courierCommentsService.getComments(this.courier.courierId).subscribe(res => {
+    this.courierCommentsService.getComments(this.courier.CourierId).subscribe(res => {
       if (res == null)
         alert("Error!!!");
       else

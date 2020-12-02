@@ -1,27 +1,29 @@
 <h3> הזמנות שבוצעו</h3>
 <br>
-<div *ngFor="let i of packages" style="display: inline-block;">
+<div  *ngFor="let i of packages" style=" direction: rtl;
+text-align: right; display: inline-block;">
     <div class="card d-flex flex-row bd-highlight mb-3" style="width: 18rem; text-align: center;">
-        <div class="card-bodym d-inline">
-            <p class="card-text" id="madeInShipingFront">קוד חבילה: {{i.packageId}}</p>
-            <p class="card-text" id="madeInShipingFront">כתובת איסוף: {{i.collectionAddress}}</p>
-            <p class="card-text" id="madeInShipingFront">קומת איסוף: {{i.cFloor}}</p>
-            <p class="card-text" id="madeInShipingFront">כתובת יעד: {{i.destination}}</p>
-            <p class="card-text" id="madeInShipingFront">קומת יעד: {{i.dFloor}}</p>
-            <p class="card-text" id="madeInShipingFront">שם פרטי: {{i.firstName}}</p>
-            <p class="card-text" id="madeInShipingFront">שם משפחה: {{i.lastName}}</p>
-            <p class="card-text" id="madeInShipingFront">אמייל: {{i.email}}</p>
+        <div  class="card-bodym d-inline">
+            <p class="card-text" id="madeInShipingFront">קוד חבילה: {{i.PackageId}}</p>
+            <p class="card-text" id="madeInShipingFront">כתובת איסוף: {{i.CollectionAddress}}</p>
+            <p class="card-text" id="madeInShipingFront">קומת איסוף: {{i.Cfloor}}</p>
+            <p class="card-text" id="madeInShipingFront">כתובת יעד: {{i.Destination}}</p>
+            <p class="card-text" id="madeInShipingFront">קומת יעד: {{i.Dfloor}}</p>
+            <p class="card-text" id="madeInShipingFront">שם פרטי: {{i.FirstName}}</p>
+            <p class="card-text" id="madeInShipingFront">שם משפחה: {{i.LastName}}</p>
+            <p class="card-text" id="madeInShipingFront">אמייל: {{i.Email}}</p>
             <p class="card-text" id="madeInShipingFront">טלפון שולח: {{i.SenderPhone}}</p>
-            <p class="card-text" id="madeInShipingFront">שם בחשבונית: {{i.invoiceName}}</p>
-            <p class="card-text" id="madeInShipingFront">טלפון מקבל המשלוח: {{i.phoneReceivesShipping}}</p>
+            <p class="card-text" id="madeInShipingFront">שם בחשבונית: {{i.InvoiceName}}</p>
+            <p class="card-text" id="madeInShipingFront">טלפון מקבל המשלוח: {{i.PhoneReceivesShipping}}</p>
             <p class="card-text" id="madeInShipingFront">טלפון שולח: {{i.SenderPhone}}</p>
-            <p class="card-text" id="madeInShipingFront">שם חברה: {{i.companyName}}</p>
-            <p class="card-text" id="madeInShipingFront">שם מלא: {{i.fullName}}</p>
-            <p class="card-text" id="madeInShipingFront">משך השליחה: {{i.duringSending}}</p>
-            <p class="card-text" id="madeInShipingFront">משקל: {{i.weigth}}</p>
-            <p class="card-text" id="madeInShipingFront">תאריך נוכחי: {{i.dateNow}}</p>
-            <p class="card-text" id="madeInShipingFront">תאור: {{i.description}}</p>
-            <p class="card-text" id="madeInShipingFront">סטטוס: {{i.status}}</p>
+            <p class="card-text" id="madeInShipingFront">שם חברה: {{i.CompanyName}}</p>
+            <p class="card-text" id="madeInShipingFront">שם מלא: {{i.FullName}}</p>
+            <p class="card-text" id="madeInShipingFront">משך השליחה: {{i.DuringSending}}</p>
+            <p class="card-text" id="madeInShipingFront">משקל: {{i.Weigth}}</p>
+            <p class="card-text" id="madeInShipingFront">תאריך נוכחי: {{i.DateNow}}</p>
+            <p class="card-text" id="madeInShipingFront">תאור: {{i.Description}}</p>
+            <p class="card-text" id="madeInShipingFront">סטטוס: {{i.Status}}</p>
         </div>
     </div>
 </div>
+&nbsp;

@@ -64,7 +64,6 @@
     <Compile Include="CourierBL.cs" />
     <Compile Include="CustomerBL.cs" />
     <Compile Include="MadeShipmentsBL.cs" />
-    <Compile Include="orTool.cs" />
     <Compile Include="PackageBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UpdateDetailsBL.cs" />

@@ -11,14 +11,14 @@ import { MadeShipments } from '../class/MadeShipments';
 })
 export class MyShipmentsComponent implements OnInit {
   packageId: number;
-  customer: Customers;
+  customer: any;
   packages: MadeShipments[] = [];
 
   constructor(public myShipmentsService: MyShipmentsService, public router: Router) { }
 
   ngOnInit(): void {
     this.customer = JSON.parse(localStorage.getItem("customer"));
-    this.myShipmentsService.getMadeShipmentsFromServer(this.customer.customerId).subscribe(res => {
+    this.myShipmentsService.getMadeShipmentsFromServer(this.customer.CustomerId).subscribe(res => {
       if (res == null)
         alert("Error!!!!!");
       else

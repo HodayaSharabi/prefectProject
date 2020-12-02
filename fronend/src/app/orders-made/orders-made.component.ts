@@ -21,6 +21,7 @@ export class OrdersMadeComponent implements OnInit {
   ngOnInit(): void {
     this.manager = JSON.parse(localStorage.getItem("manager"));
     this.ordersMadeService.getMadeShipmentsFromServer().subscribe(res => {
+      console.log(res);
       this.packages = res;
     })
   }

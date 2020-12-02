@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using Dto;
+
 namespace BL
 {
     public class CourierBL
@@ -77,15 +78,15 @@ namespace BL
             List<Couriers> c = db.Couriers.ToList();
             return CourierDTO.ListToDTO(c);
         }
-        //public static List<CouriersComments> CourierComments(int courierId)
-        //{
-        //    List<CouriersComments> c = db.CouriersComments.Where(x => x.CourierId == courierId).ToList();
-        //    return CourierDTO.ListToDTO(c);
-        //}
-        // GetSelectionShipment - הפונקציה 
-        // צריך ליצור אוביקט מסוג משלוחן שיכיל בתוכו את כל פרטי המשלוחן
+        public static List<CouriersCommentsDTO> CourierComments(int courierId)
+        {
+            List<CouriersComments> cc = db.CouriersComments.Where(x => x.CourierId == courierId).ToList();
+            return CouriersCommentsDTO.Listtodto(cc);
+        }
+        //GetSelectionShipment - הפונקציה
+        //צריך ליצור אוביקט מסוג משלוחן שיכיל בתוכו את כל פרטי המשלוחן
         //ואוביקט מסוג משלוח שיכיל את כל פרטי המשלוח
-        // id האוביקטים יהיו לפי ה  
+        // id האוביקטים יהיו לפי ה
         // db - ואז נוסיף אותם ל
 
         //public static bool GetSelectionShipment(int courierId, int packageIdPac)

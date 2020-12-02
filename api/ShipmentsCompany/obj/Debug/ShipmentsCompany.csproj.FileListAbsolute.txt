@@ -245,14 +245,10 @@ C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\Shipments
 C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\ShipmentsCompany\bin\System.Xml.XmlSerializer.dll
 C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\ShipmentsCompany\bin\System.Xml.XPath.dll
 C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\ShipmentsCompany\bin\System.Xml.XPath.XDocument.dll
-C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\ShipmentsCompany\bin\Google.Protobuf.dll
 C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\ShipmentsCompany\bin\System.Buffers.dll
 C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\ShipmentsCompany\bin\System.Memory.dll
 C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\ShipmentsCompany\bin\System.Numerics.Vectors.dll
 C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\ShipmentsCompany\bin\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\ShipmentsCompany\bin\Google.Protobuf.pdb
-C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\ShipmentsCompany\bin\Google.Protobuf.xml
-C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\ShipmentsCompany\bin\System.Buffers.xml
 C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\ShipmentsCompany\bin\System.Memory.xml
 C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\ShipmentsCompany\bin\System.Numerics.Vectors.xml
 C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\ShipmentsCompany\bin\System.Runtime.CompilerServices.Unsafe.xml
