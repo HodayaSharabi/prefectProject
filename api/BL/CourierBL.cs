@@ -19,7 +19,7 @@ namespace BL
 
         public static CourierDTO Login(string CourierCode)
         {
-            var courier = db.Couriers.FirstOrDefault(p => p.CourierPersonalCode == CourierCode && p.CourierStatus == 1);
+            Couriers courier = db.Couriers.FirstOrDefault(p => p.CourierPersonalCode == CourierCode && p.CourierStatus == 1);
             return CourierDTO.ConvertDto(courier);
         }
 
@@ -72,11 +72,11 @@ namespace BL
             var r = db.Coment.ToList();
             return r;
         }
-        //public static List<CourierDTO> GetCouriersDetail()
-        //{
-        //    var c = db.Couriers.ToList();
-        //    return c;
-        //}
+        public static List<CourierDTO> GetCouriersDetail()
+        {
+            List<Couriers> c = db.Couriers.ToList();
+            return CourierDTO.ListToDTO(c);
+        }
         //public static List<CouriersComments> CourierComments(int courierId)
         //{
         //    List<CouriersComments> c = db.CouriersComments.Where(x => x.CourierId == courierId).ToList();

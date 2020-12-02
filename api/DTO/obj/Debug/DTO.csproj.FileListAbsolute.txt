@@ -12,10 +12,6 @@ C:\Users\User\Desktop\פרויקט גמר\Server\ShipmentsCompany\DTO\bin\Debug\
 C:\Users\User\Desktop\פרויקט גמר\Server\ShipmentsCompany\DTO\obj\Debug\DTO.csproj.CopyComplete
 C:\Users\User\Desktop\פרויקט גמר\Server\ShipmentsCompany\DTO\obj\Debug\DTO.dll
 C:\Users\User\Desktop\פרויקט גמר\Server\ShipmentsCompany\DTO\obj\Debug\DTO.pdb
-C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
-C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DTO\obj\Debug\DTO.dll
-C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DTO\obj\Debug\DTO.pdb
 C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DTO\bin\Debug\DTO.dll
 C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DTO\bin\Debug\DTO.pdb
 C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DTO\bin\Debug\DAL.dll
@@ -25,4 +21,8 @@ C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DTO\bin\D
 C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DTO\bin\Debug\DAL.dll.config
 C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DTO\bin\Debug\EntityFramework.xml
 C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DTO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DTO\obj\Debug\DTO.csproj.CopyComplete
+C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DTO\obj\Debug\DTO.dll
+C:\Users\Shira\Desktop\מיכל והודיה בהן\prefectProject\api\DTO\obj\Debug\DTO.pdb

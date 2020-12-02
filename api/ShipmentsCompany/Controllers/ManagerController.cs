@@ -19,11 +19,10 @@ namespace CourierProject.Controllers
         {
             return BL.CourierBL.ManagerLogin(ManagerCode);
         }
-        //[Route("GetCouriersDetail/")]
-        //[HttpGet]
-        //public List<CourierDTO> GetCouriersDetail()
-        //{
-        //    return CourierBL.GetCouriersDetail();
-        //}
+        [Route("GetCouriersDetail")]
+        public IHttpActionResult GetCouriersDetail()
+        {
+            return Ok( CourierBL.GetCouriersDetail());
+        }
     }
 }

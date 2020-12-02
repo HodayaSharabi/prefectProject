@@ -18,9 +18,11 @@ export class CouriersDetailsComponent implements OnInit {
   constructor(public couriersDetailsService: CouriersDetailsService, public router: Router) { }
 
   ngOnInit(): void {
-    this.courier = JSON.parse(localStorage.getItem("courier"));
+    // this.courier = JSON.parse(localStorage.getItem("courier"));
     this.couriersDetailsService.getCouriers().subscribe(res => {
+      console.log(res)
       this.couriers = res;
+      console.log(this.courier)
     })
 
   }

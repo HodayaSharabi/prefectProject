@@ -5,8 +5,8 @@
     <br>
     <div id="CouriersWay" *ngFor="let i of couriers">
         <div class="card" style="width: 18rem;">
-            <p>קוד משלוחן: {{i.courierId}}</p>
-            <p>שם משלוחן: {{i.courierFirstName}} {{i.courierLastName}}</p>
+            <p>קוד משלוחן: {{i.CourierId}}</p>
+            <p>שם משלוחן: {{i.CourierFirstName}} {{i.CourierLastName}}</p>
             <agm-map [latitude]="lat" [longitude]="lng">
                 <agm-marker [latitude]="packageAddress.SourcePackageLat" [longitude]="packageAddress.SourcePackageLon">
                 </agm-marker>

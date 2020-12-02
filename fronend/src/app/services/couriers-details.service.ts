@@ -19,8 +19,8 @@ export class CouriersDetailsService {
     return this.httpClient.get("http://localhost:54216/api/Courier/addCourier/" + newCourier);
   }
 
-  getCouriers(): Observable<Couriers[]> {
-    return this.httpClient.get<Couriers[]>("http://localhost:54216/api/Manager/GetCouriersDetail/");
+  getCouriers(): Observable<Array<Couriers>> {
+    return this.httpClient.get<Array<Couriers>>("http://localhost:54216/api/Manager/GetCouriersDetail/");
   }
 
 }

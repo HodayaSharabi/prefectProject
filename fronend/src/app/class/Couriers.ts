@@ -10,3 +10,5 @@ export class Couriers {
     courierStatus: number;
     courierTypeOfTransport: number;
 }
+
+

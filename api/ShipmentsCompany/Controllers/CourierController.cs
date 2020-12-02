@@ -14,9 +14,9 @@ namespace CourierProject.Controllers
     {
         [Route("loginCourier/{CourierCode}")]
         [HttpGet]
-        public CourierDTO loginCourier(string CourierCode)
+        public IHttpActionResult loginCourier(string CourierCode)
         {
-            return BL.CourierBL.Login(CourierCode);
+            return Ok( BL.CourierBL.Login(CourierCode));
         }
         [Route("deleteCourier/{courierTz}")]
         [HttpGet]

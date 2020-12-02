@@ -22,6 +22,7 @@ export class CourierLoginComponent implements OnInit {
   InsertCourier() {
     this.id = this.CourierCode;
     this.courierLoginService.InsertCourierService(this.CourierCode).subscribe(res => {
+      debugger;
       if (res == null)
         alert("נא הקש פרטים נחוצים");
       else {
