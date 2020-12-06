@@ -100,7 +100,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     NgbModule,
     AgmCoreModule.forRoot({ // @agm/core
-      apiKey: 'AIzaSyCumD0NGABi1GHNJKBhzkA85VoWjBopRoQ',
+      // apiKey: 'AIzaSyCumD0NGABi1GHNJKBhzkA85VoWjBopRoQ',
+      apiKey: 'AIzaSyBBpy-z05AEn8HQgg0jQ3JpNIzuTAo-OTw'
     }),
     AgmDirectionModule,
     GooglePlaceModule,

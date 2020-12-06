@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="CourierBL.cs" />
     <Compile Include="CustomerBL.cs" />
+    <Compile Include="EmailBLL.cs" />
     <Compile Include="MadeShipmentsBL.cs" />
     <Compile Include="PackageBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

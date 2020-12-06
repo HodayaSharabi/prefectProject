@@ -115,6 +115,7 @@
     <Compile Include="Controllers\CommentsControler.cs" />
     <Compile Include="Controllers\CourierController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MadeShipmentsController.cs" />
     <Compile Include="Controllers\ManagerController.cs" />
@@ -182,7 +183,9 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Google.OrTools.runtime.win-x64.8.0.8283\build\net45\Google.OrTools.runtime.win-x64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Google.OrTools.runtime.win-x64.8.0.8283\build\net45\Google.OrTools.runtime.win-x64.targets'))" />
   </Target>
+  <Import Project="..\packages\Google.OrTools.runtime.win-x64.8.0.8283\build\net45\Google.OrTools.runtime.win-x64.targets" Condition="Exists('..\packages\Google.OrTools.runtime.win-x64.8.0.8283\build\net45\Google.OrTools.runtime.win-x64.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

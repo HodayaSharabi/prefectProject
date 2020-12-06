@@ -7,6 +7,7 @@ using System.Web.Http;
 using DAL;
 using DTO;
 using BL;
+using Dto;
 namespace CourierProject.Controllers
 {
     [RoutePrefix("api/Comments")]
@@ -18,12 +19,12 @@ namespace CourierProject.Controllers
         {
             return CourierBL.GetComments();
         }
-        //[Route("GetCommentsToCourier/{courierId}")]
-        //[HttpGet]
-        //public List<CouriersComments> GetCommentsToCourier(int courierId)
-        //{
-        //    return BL.CourierBL.CourierComments(courierId);
+        [Route("GetCommentsToCourier/{courierId}")]
+        [HttpGet]
+        public List<CouriersCommentsDTO> GetCommentsToCourier(int courierId)
+        {
+            return BL.CourierBL.CourierComments(courierId);
 
-    //}
+        }
     };
 }
