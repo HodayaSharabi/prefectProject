@@ -24,5 +24,7 @@ namespace DAL
         public string CourierPhone { get; set; }
         public Nullable<int> CourierStatus { get; set; }
         public Nullable<int> CourierTypeOfTransport { get; set; }
+        public Nullable<double> Lon { get; set; }
+        public Nullable<double> Lat { get; set; }
     }
 }

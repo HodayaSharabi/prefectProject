@@ -18,6 +18,8 @@ namespace Dto
         public string CourierPhone { get; set; }
         public Nullable<int> CourierStatus { get; set; }
         public Nullable<int> CourierTypeOfTransport { get; set; }
+        public Nullable<double> Lon { get; set; }
+        public Nullable<double> Lat { get; set; }
 
         //public static Dal.Courier_TBL ConvertDal(Courier c)
         //{
@@ -40,6 +42,8 @@ namespace Dto
                 CourierPhone = c.CourierPhone,
                 CourierStatus = c.CourierStatus,
                 CourierTypeOfTransport = c.CourierTypeOfTransport,
+                Lon= c.Lon , 
+                Lat= c.Lat,
             };
         }
         public static List<CourierDTO> ListToDTO(List<Couriers> list)

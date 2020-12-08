@@ -20,5 +20,9 @@ export class Packages {
     descriptionPac: string;
     commendsPac: string;
     statusPac: string;
-    packageAdress: PackageAddress = new PackageAddress();
+    SourcePackageLon: number;
+    SourcePackageLat: number;
+    DestinetionPackageLon: number;
+    DestinationPackageLat: number;
+    CourierCode: number ;
 }

@@ -9,6 +9,8 @@ export class Couriers {
     courierPhone: string;
     courierStatus: number;
     courierTypeOfTransport: number;
+    Lon: number;
+    Lat: number;
 }
 
 

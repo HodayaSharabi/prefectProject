@@ -11,6 +11,9 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "types": [
+      "googlemaps"
+    ],
     "lib": [
       "es2018",
       "dom"

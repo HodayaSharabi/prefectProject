@@ -51,6 +51,8 @@
           <Property Name="CourierPhone" Type="nvarchar" MaxLength="50" />
           <Property Name="CourierStatus" Type="int" />
           <Property Name="CourierTypeOfTransport" Type="int" />
+          <Property Name="Lon" Type="float" />
+          <Property Name="Lat" Type="float" />
         </EntityType>
         <EntityType Name="CouriersComments">
           <Key>
@@ -139,6 +141,11 @@
           <Property Name="Description" Type="nvarchar" MaxLength="50" />
           <Property Name="CommendsPac" Type="nvarchar" MaxLength="50" />
           <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="SourcePackageLon" Type="float" />
+          <Property Name="SourcePackageLat" Type="float" />
+          <Property Name="DestinetionPackageLon" Type="float" />
+          <Property Name="DestinationPackageLat" Type="float" />
+          <Property Name="CourierCode" Type="int" />
         </EntityType>
         <EntityType Name="PackagesToCouriers">
           <Key>
@@ -158,6 +165,13 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'CourierCompany.dbo.Types' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Types">
+          <Property Name="Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Value" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+        </EntityType>-->
         <Association Name="FK_PackagesToCouriers_Packages">
           <End Role="Packages" Type="Self.Packages" Multiplicity="1" />
           <End Role="PackagesToCouriers" Type="Self.PackagesToCouriers" Multiplicity="*" />
@@ -269,6 +283,8 @@
           <Property Name="CourierPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CourierStatus" Type="Int32" />
           <Property Name="CourierTypeOfTransport" Type="Int32" />
+          <Property Name="Lon" Type="Double" />
+          <Property Name="Lat" Type="Double" />
         </EntityType>
         <EntityType Name="CouriersComments">
           <Key>
@@ -357,6 +373,11 @@
           <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CommendsPac" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SourcePackageLon" Type="Double" />
+          <Property Name="SourcePackageLat" Type="Double" />
+          <Property Name="DestinetionPackageLon" Type="Double" />
+          <Property Name="DestinationPackageLat" Type="Double" />
+          <Property Name="CourierCode" Type="Int32" />
           <NavigationProperty Name="PackagesToCouriers" Relationship="Self.FK_PackagesToCouriers_Packages" FromRole="Packages" ToRole="PackagesToCouriers" />
         </EntityType>
         <EntityType Name="PackagesToCouriers">
@@ -500,6 +521,8 @@
                 <ScalarProperty Name="CourierPhone" ColumnName="CourierPhone" />
                 <ScalarProperty Name="CourierStatus" ColumnName="CourierStatus" />
                 <ScalarProperty Name="CourierTypeOfTransport" ColumnName="CourierTypeOfTransport" />
+                <ScalarProperty Name="Lon" ColumnName="Lon" />
+                <ScalarProperty Name="Lat" ColumnName="Lat" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -590,6 +613,11 @@
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="CommendsPac" ColumnName="CommendsPac" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="SourcePackageLon" ColumnName="SourcePackageLon" />
+                <ScalarProperty Name="SourcePackageLat" ColumnName="SourcePackageLat" />
+                <ScalarProperty Name="DestinetionPackageLon" ColumnName="DestinetionPackageLon" />
+                <ScalarProperty Name="DestinationPackageLat" ColumnName="DestinationPackageLat" />
+                <ScalarProperty Name="CourierCode" ColumnName="CourierCode" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

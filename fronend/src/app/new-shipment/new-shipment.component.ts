@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Packages } from '../class/Packages';
 import { NewShipmentService } from '../services/new-shipment.service';
 import { Router } from '@angular/router';
@@ -11,14 +11,19 @@ import { PackageAddress } from '../class/PackageAddress';
   styleUrls: ['./new-shipment.component.scss']
 })
 export class NewShipmentComponent implements OnInit {
-
+  @Input() latitudec:any
+  @Input() longitudec: any
+  @Input() addressc: any
   newShipment: Packages = new Packages();
 
-  constructor(public newShipmentService: NewShipmentService, router: Router) { }
 
+  constructor(public newShipmentService: NewShipmentService, router: Router) { }
   ngOnInit(): void {
   }
-
+  public doSomething(date: any):void {
+    debugger
+    console.log('Picked date: ', date);
+}
   getGeoLocation(address: string): Observable<any> {
     console.log('Getting address: ', address);
     let geocoder = new google.maps.Geocoder();
@@ -44,15 +49,15 @@ export class NewShipmentComponent implements OnInit {
     }
   }
 
-  public CollactionAddressChange(address: any) {
-    //setting address from API to local variable 
-    debugger;
-    this.getGeoLocation(address.formatted_address).subscribe(res => {
-      this.newShipment.packageAdress.destinationPackageLat = res.lat();
-      this.newShipment.packageAdress.destinetionPackageLon = res.lng()
-      debugger;
-    })
-  }
+  // public CollactionAddressChange(address: any) {
+  //   //setting address from API to local variable 
+  //   debugger;
+  //   this.getGeoLocation(address.formatted_address).subscribe(res => {
+  //     this.newShipment.packageAdress.destinationPackageLat = res.lat();
+  //     this.newShipment.packageAdress.destinetionPackageLon = res.lng()
+  //     debugger;
+  //   })
+  // }
   public DestinationAddressChange(address: any) {
     //setting address from API to local variable 
     debugger;
@@ -64,6 +69,7 @@ export class NewShipmentComponent implements OnInit {
   }
 
   GetNewShipment() {
+    console.log(this.newShipment)
     this.newShipmentService.getNewShipment(this.newShipment).subscribe(res => {
       if (res == null)
         alert("נא הכנס פרטים נחוצים");

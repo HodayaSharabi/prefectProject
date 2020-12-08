@@ -8,7 +8,6 @@ using DTO;
 //using Google.OrTools.ConstraintSolver;
 //using Google.OrTools.LinearSolver;
 
-
 namespace BL
 {
     public static class PackageBL
@@ -19,8 +18,93 @@ namespace BL
 
         public static void getNewPackage(Packages package1)
         {
+            double? distance = 9999999999999999;
+            Couriers selectC = new Couriers();
+           var CourierTypeOfTransport=0;
+
+            if (package1.Weigth<=50)
+                CourierTypeOfTransport = 1;
+            if (package1.Weigth > 50  && package1.Weigth <200)
+                CourierTypeOfTransport = 2;
+            if( package1.Weigth > 200)
+                CourierTypeOfTransport = 3;
+            List<Couriers> LC = db.Couriers.Where(c => c.CourierStatus == 2 && c.CourierTypeOfTransport.Value == CourierTypeOfTransport).ToList();
+            foreach (var c in LC)
+            {
+                // שליחה לפנויקציה שבןדקת מרחק 
+                // בחירת השליח שהצרחק שלו אכ קטן 
+                double? dis1 = GetDistance(c.Lat.Value, c.Lon.Value, package1.SourcePackageLat.Value, package1.SourcePackageLon.Value);
+                double? dis2 = GetDistance(c.Lat.Value, c.Lon.Value, package1.SourcePackageLat.Value, package1.SourcePackageLon.Value);
+                if(dis1+dis2 < distance)
+                {
+                    selectC = c;
+                    distance = dis1 + dis2;
+                }
+            }
+            package1.CourierCode = selectC.CourierId;
             db.Packages.Add(package1);
             db.SaveChanges();
+
+        }
+        private static double DegsToRadians(double degrees)
+        {
+            return (0.017453292519943295 * degrees);
+        }
+
+        public static double? GetDistance(double lat1, double lon1, double lat2, double lon2)
+        {
+            long num = 0x615299L;
+            double num2 = 6356752.3142;
+            double num3 = 0.0033528106647474805;
+            double num4 = DegsToRadians(lon2 - lon1);
+            double a = Math.Atan((1 - num3) * Math.Tan(DegsToRadians(lat1)));
+            double num6 = Math.Atan((1 - num3) * Math.Tan(DegsToRadians(lat2)));
+            double num7 = Math.Sin(a);
+            double num8 = Math.Sin(num6);
+            double num9 = Math.Cos(a);
+            double num10 = Math.Cos(num6);
+            double num11 = num4;
+            double num12 = 6.2831853071795862;
+            int num13 = 20;
+            double y = 0;
+            double x = 0;
+            double num18 = 0;
+            double num20 = 0;
+            double num22 = 0;
+            while ((Math.Abs((double)(num11 - num12)) > 1E-12) && (--num13 > 0))
+            {
+                double num14 = Math.Sin(num11);
+                double num15 = Math.Cos(num11);
+                y = Math.Sqrt(((num10 * num14) * (num10 * num14)) + (((num9 * num8) - ((num7 * num10) * num15)) * ((num9 * num8) - ((num7 * num10) * num15))));
+                if (y == 0)
+                {
+                    return 0;
+                }
+                x = (num7 * num8) + ((num9 * num10) * num15);
+                num18 = Math.Atan2(y, x);
+                double num19 = ((num9 * num10) * num14) / y;
+                num20 = 1 - (num19 * num19);
+                if (num20 == 0)
+                {
+                    num22 = 0;
+                }
+                else
+                {
+                    num22 = x - (((2 * num7) * num8) / num20);
+                }
+                double num21 = ((num3 / 16) * num20) * (4 + (num3 * (4 - (3 * num20))));
+                num12 = num11;
+                num11 = num4 + ((((1 - num21) * num3) * num19) * (num18 + ((num21 * y) * (num22 + ((num21 * x) * (-1 + ((2 * num22) * num22)))))));
+            }
+            if (num13 == 0)
+            {
+                return null;
+            }
+            double num23 = (num20 * ((num * num) - (num2 * num2))) / (num2 * num2);
+            double num24 = 1 + ((num23 / 16384) * (4096 + (num23 * (-768 + (num23 * (320 - (175 * num23)))))));
+            double num25 = (num23 / 1024) * (256 + (num23 * (-128 + (num23 * (74 - (47 * num23))))));
+            double num26 = (num25 * y) * (num22 + ((num25 / 4) * ((x * (-1 + ((2 * num22) * num22))) - ((((num25 / 6) * num22) * (-3 + ((4 * y) * y))) * (-3 + ((4 * num22) * num22))))));
+            return new double?((num2 * num24) * (num18 - num26));
         }
         //public static void SortPackages()
         //{

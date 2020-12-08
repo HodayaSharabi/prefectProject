@@ -47,6 +47,7 @@ import { UpdateDetailsCourierComponent } from './update-details-courier/update-d
 import { ShippingSelectionComponent } from './shipping-selection/shipping-selection.component';
 import { CommentsToCourierComponent } from './comments-to-courier/comments-to-courier.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GogelMapSearchComponent } from './gogel-map-search/gogel-map-search.component';
 // import { MatSliderModule } from '@angular/material/slider';
 // import {CommentsAndIlluminationsComponent}  
 
@@ -91,6 +92,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UpdateDetailsCourierComponent,
     ShippingSelectionComponent,
     CommentsToCourierComponent,
+    GogelMapSearchComponent,
 
   ],
   imports: [
@@ -100,8 +102,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     NgbModule,
     AgmCoreModule.forRoot({ // @agm/core
-      // apiKey: 'AIzaSyCumD0NGABi1GHNJKBhzkA85VoWjBopRoQ',
-      apiKey: 'AIzaSyBBpy-z05AEn8HQgg0jQ3JpNIzuTAo-OTw'
+      // apiKey: 'AIzaSyCumD0NGABi1GHNJKBhzkA85VoWjBopRoQ',// שלהם
+      // apiKey: 'AIzaSyBBpy-z05AEn8HQgg0jQ3JpNIzuTAo-OTw'//שלי
+    //  apiKey:'AIzaSyCwf5KJRSPX0QNNrFegWfcoGDXxukDH6Kk' 
+     apiKey:'AIzaSyAYSiaPzb95HxoqKGRKaYFczQZC8m3TlnE' ,
+     libraries: ['places' , 'javascript']
+
     }),
     AgmDirectionModule,
     GooglePlaceModule,

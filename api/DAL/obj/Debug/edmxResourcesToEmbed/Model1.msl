@@ -47,6 +47,8 @@
           <ScalarProperty Name="CourierPhone" ColumnName="CourierPhone" />
           <ScalarProperty Name="CourierStatus" ColumnName="CourierStatus" />
           <ScalarProperty Name="CourierTypeOfTransport" ColumnName="CourierTypeOfTransport" />
+          <ScalarProperty Name="Lon" ColumnName="Lon" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -137,6 +139,11 @@
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="CommendsPac" ColumnName="CommendsPac" />
           <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SourcePackageLon" ColumnName="SourcePackageLon" />
+          <ScalarProperty Name="SourcePackageLat" ColumnName="SourcePackageLat" />
+          <ScalarProperty Name="DestinetionPackageLon" ColumnName="DestinetionPackageLon" />
+          <ScalarProperty Name="DestinationPackageLat" ColumnName="DestinationPackageLat" />
+          <ScalarProperty Name="CourierCode" ColumnName="CourierCode" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

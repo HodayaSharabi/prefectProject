@@ -46,6 +46,8 @@
     <Property Name="CourierPhone" Type="nvarchar" MaxLength="50" />
     <Property Name="CourierStatus" Type="int" />
     <Property Name="CourierTypeOfTransport" Type="int" />
+    <Property Name="Lon" Type="float" />
+    <Property Name="Lat" Type="float" />
   </EntityType>
   <EntityType Name="CouriersComments">
     <Key>
@@ -134,6 +136,11 @@
     <Property Name="Description" Type="nvarchar" MaxLength="50" />
     <Property Name="CommendsPac" Type="nvarchar" MaxLength="50" />
     <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="SourcePackageLon" Type="float" />
+    <Property Name="SourcePackageLat" Type="float" />
+    <Property Name="DestinetionPackageLon" Type="float" />
+    <Property Name="DestinationPackageLat" Type="float" />
+    <Property Name="CourierCode" Type="int" />
   </EntityType>
   <EntityType Name="PackagesToCouriers">
     <Key>
@@ -153,6 +160,13 @@
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'CourierCompany.dbo.Types' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Types">
+          <Property Name="Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Value" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+        </EntityType>-->
   <Association Name="FK_PackagesToCouriers_Packages">
     <End Role="Packages" Type="Self.Packages" Multiplicity="1" />
     <End Role="PackagesToCouriers" Type="Self.PackagesToCouriers" Multiplicity="*" />

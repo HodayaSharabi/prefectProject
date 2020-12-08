@@ -46,6 +46,8 @@
     <Property Name="CourierPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="CourierStatus" Type="Int32" />
     <Property Name="CourierTypeOfTransport" Type="Int32" />
+    <Property Name="Lon" Type="Double" />
+    <Property Name="Lat" Type="Double" />
   </EntityType>
   <EntityType Name="CouriersComments">
     <Key>
@@ -134,6 +136,11 @@
     <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="CommendsPac" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SourcePackageLon" Type="Double" />
+    <Property Name="SourcePackageLat" Type="Double" />
+    <Property Name="DestinetionPackageLon" Type="Double" />
+    <Property Name="DestinationPackageLat" Type="Double" />
+    <Property Name="CourierCode" Type="Int32" />
     <NavigationProperty Name="PackagesToCouriers" Relationship="Self.FK_PackagesToCouriers_Packages" FromRole="Packages" ToRole="PackagesToCouriers" />
   </EntityType>
   <EntityType Name="PackagesToCouriers">

@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { Couriers } from '../class/Couriers';
 import { Observable } from 'rxjs';
 import { ShippingOperationsInRealTimeService } from '../services/shipping-operations-in-real-time.service';
-
 @Component({
   selector: 'app-shipping-operations-in-real-time',
   templateUrl: './shipping-operations-in-real-time.component.html',

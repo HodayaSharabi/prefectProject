@@ -39,6 +39,11 @@ namespace DAL
         public string Description { get; set; }
         public string CommendsPac { get; set; }
         public string Status { get; set; }
+        public Nullable<double> SourcePackageLon { get; set; }
+        public Nullable<double> SourcePackageLat { get; set; }
+        public Nullable<double> DestinetionPackageLon { get; set; }
+        public Nullable<double> DestinationPackageLat { get; set; }
+        public Nullable<int> CourierCode { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PackagesToCouriers> PackagesToCouriers { get; set; }

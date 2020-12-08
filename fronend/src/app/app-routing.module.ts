@@ -34,6 +34,7 @@ import { ShipmentsCourierViewComponent } from './shipments-courier-view/shipment
 import { UpdateDetailsCourierComponent } from './update-details-courier/update-details-courier.component';
 import { ShippingSelectionComponent } from './shipping-selection/shipping-selection.component';
 import { CommentsToCourierComponent } from './comments-to-courier/comments-to-courier.component';
+import { GogelMapSearchComponent } from './gogel-map-search/gogel-map-search.component';
 
 
 const routes: Routes = [
@@ -128,6 +129,12 @@ const routes: Routes = [
       {
         path: "NewShipment",
         component: NewShipmentComponent
+        // , children: [
+        //   {
+        //     path: "GogelMapSearchComponent",
+        //     component: GogelMapSearchComponent
+        //   }
+        // ]
       },
       {
         path: "UpdateDetails",
@@ -200,7 +207,11 @@ const routes: Routes = [
   {
     path: "SendMessage",
     component: SendMessageComponent
-  }
+  },
+  {
+        path: "GogelMapSearchComponent",
+        component: GogelMapSearchComponent
+      }
 ];
 
 @NgModule({
