@@ -48,6 +48,12 @@ namespace CourierProject.Controllers
         {
             return BL.CourierBL.ShipingSelection();
         }
+        [Route ("getRouterToCourier")]
+        [HttpPut]
+        public IHttpActionResult getROuterToCuotio(CourierDTO c)
+        {
+            return Ok(BL.CourierBL.GetCourierDetailMaps(c));
+        }
         //[Route("GetSelectionShipment")]
         //[HttpPost]
         //public bool GetSelectionShipment(int courierId, int packageIdPac)
@@ -64,9 +70,9 @@ namespace CourierProject.Controllers
 
         //[Route("getMyShipments/{courier}")]
         //[HttpGet]
-        //public List<PackageDto> GetMyShipments(int courier)
+        //public List<PackagesDTO> GetMyShipments(int courier)
         //{
-        //    return BL.CourierBL.(courier);
+        //    return BL.CourierBL.GetCourierDetailMaps(courier);
         //}
 
 

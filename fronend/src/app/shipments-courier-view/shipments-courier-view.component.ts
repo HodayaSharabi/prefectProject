@@ -3,7 +3,11 @@ import { Couriers } from '../class/Couriers';
 import { ShipmentsCourierViewService } from '../services/shipments-courier-view.service';
 import { Packages } from '../class/Packages';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, TimeoutError } from 'rxjs';
+import { CourierViewService } from '../services/courier-view.service';
+import { MapTOCurios } from '../shipping-operations-in-real-time/shipping-operations-in-real-time.component';
+import { MapsAPILoader } from '@agm/core';
+import { localizedString } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-shipments-courier-view',
@@ -15,13 +19,40 @@ export class ShipmentsCourierViewComponent implements OnInit {
   packages: Packages[] = [];
   couriersWay: Couriers[] = [];
   couriers: Couriers[] = [];
-
-  constructor(public shipmentsCourierViewService: ShipmentsCourierViewService, public router: Router) { }
+  mTC: MapTOCurios = new MapTOCurios();
+  listOriginDestination: routerOnMap[] = new Array();
+  listWaypoints:any= [];
+  constructor(public shipmentsCourierViewService: ShipmentsCourierViewService,
+    public router: Router, public courierViewService: CourierViewService) { }
 
   ngOnInit(): void {
     this.getDirection();
     this.GetCourierWay();
     this.courier = JSON.parse(localStorage.getItem("courier"));
+    this.courierViewService.getRouterToCourier(this.courier).subscribe(res => {
+      this.mTC = res;
+      console.log(this.mTC);
+      const tt=   this.mTC.LatLng;
+      var list:any[]= new Array();
+ tt.forEach( (element, index:number) =>{
+        var originDestination: routerOnMap = new routerOnMap();
+        originDestination.origin= new LatLng()
+        originDestination.origin.lat = element.Lat;
+        originDestination.origin.lng = element.Lng;
+        originDestination.destination= new LatLng()
+        if(index < tt.length-1)
+        {
+        originDestination.destination.lat =  tt[index+1].Lat;
+        originDestination.destination.lng =  tt[index+1].Lng;
+        }
+        this.listOriginDestination.push(originDestination);
+        // this.listWaypoints.push({ location: { lat:element.Lat, lng: element.Lng } })
+      });
+
+      console.log(this.listOriginDestination);
+      console.log(this.listWaypoints);
+    })
+
   }
   updatePersonalDetails() {
     this.shipmentsCourierViewService.update(this.courier).subscribe(res => {
@@ -42,10 +73,10 @@ export class ShipmentsCourierViewComponent implements OnInit {
   getDirection() {
     // this.origin = { lat: 34.833736, lng: 34.833736 }
     // this.destination = { lat: 32.077622, lng: 34.833736 }
-    this.waypoints = [
-      { location: { lat: 24.799524, lng: 120.975015 } },
-      { location: { lat: 24.799524, lng: 120.975016 } }
-    ];
+    // this.waypoints = [
+    //   { location: { lat: 24.799524, lng: 120.975015 } },
+    //   { location: { lat: 24.799524, lng: 120.975016 } }
+    // ];
 
   }
 
@@ -92,4 +123,12 @@ export class ShipmentsCourierViewComponent implements OnInit {
         this.courier == res;
     })
   }
+}
+export class LatLng {
+  lat: number;
+  lng: number;
+}
+export class routerOnMap {
+  public origin: LatLng;
+  public destination: LatLng;
 }

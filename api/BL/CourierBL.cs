@@ -78,6 +78,79 @@ namespace BL
             List<Couriers> c = db.Couriers.ToList();
             return CourierDTO.ListToDTO(c);
         }
+        // מחזיר רשימה של משלוחנים שלכל משלחן רשימה של נקודות על המפה 
+        public static List<MapTOCurios> GetCouriersDetailMaps()
+        {
+            List<MapTOCurios> ListMTC = new List<MapTOCurios>();
+            List<Couriers> C = db.Couriers.Where(c=> c.CourierStatus==2). ToList();
+            foreach (var couriers in C)
+            {
+                MapTOCurios MTC = new MapTOCurios();
+                MTC.CourierId = couriers.CourierId;
+                MTC.CourierFirstName = couriers.CourierFirstName;
+                MTC.CourierLastName = couriers.CourierLastName;
+                List<Packages> P = db.Packages.Where(p => p.CourierCode == couriers.CourierId).ToList();
+                MTC.LatLng = new List<LanLng>();
+                LanLng latlng;
+                if (P.Count!=0)
+                {
+                    MTC.latitude = P.First(p=> p.CourierCode==couriers.CourierId).SourcePackageLat;
+                    MTC.longitude = P.First(p => p.CourierCode == couriers.CourierId).SourcePackageLon;
+                }
+               
+                foreach (var pac in P)
+                {
+      
+                    latlng = new LanLng();
+                    latlng.Lat = pac.SourcePackageLat;
+                    latlng.Lng = pac.SourcePackageLon;
+                    MTC.LatLng.Add(latlng);
+                    latlng = new LanLng();
+                    latlng.Lat = pac.DestinationPackageLat;
+                    latlng.Lng = pac.DestinetionPackageLon;
+                    MTC.LatLng.Add(latlng);
+             
+                }
+                ListMTC.Add(MTC);
+            }
+            return ListMTC;
+           
+        }
+        // מחזיר משלוחן עם רשימת נקודות על המפה 
+        public static MapTOCurios GetCourierDetailMaps(CourierDTO courier)
+        {
+            Couriers C = db.Couriers.FirstOrDefault(c => c.CourierId==courier.CourierId);
+
+                MapTOCurios MTC = new MapTOCurios();
+                MTC.CourierId = courier.CourierId;
+                MTC.CourierFirstName = courier.CourierFirstName;
+                MTC.CourierLastName = courier.CourierLastName;
+                List<Packages> P = db.Packages.Where(p => p.CourierCode == courier.CourierId).ToList();
+                MTC.LatLng = new List<LanLng>();
+                LanLng latlng;
+                if (P.Count != 0)
+                {
+                    MTC.latitude = P.First(p => p.CourierCode == courier.CourierId).SourcePackageLat;
+                    MTC.longitude = P.First(p => p.CourierCode == courier.CourierId).SourcePackageLon;
+                }
+
+                foreach (var pac in P)
+                {
+
+                    latlng = new LanLng();
+                    latlng.Lat = pac.SourcePackageLat;
+                    latlng.Lng = pac.SourcePackageLon;
+                    MTC.LatLng.Add(latlng);
+                    latlng = new LanLng();
+                    latlng.Lat = pac.DestinationPackageLat;
+                    latlng.Lng = pac.DestinetionPackageLon;
+                    MTC.LatLng.Add(latlng);
+
+                }
+            return MTC;
+
+        }
+
         public static List<CouriersCommentsDTO> CourierComments(int courierId)
         {
             List<CouriersComments> cc = db.CouriersComments.Where(x => x.CourierId == courierId).ToList();
@@ -112,4 +185,19 @@ namespace BL
         //        //var t = db.PackageAddress.Where(x => x.IdPackage == )
         //    }
     }
+}
+public class LanLng
+{
+    public double? Lat { get; set; }
+    public double? Lng { get; set; }
+}
+public class MapTOCurios
+ {
+    public int CourierId { get; set; }
+    public string CourierFirstName { get; set; }
+    public string CourierLastName { get; set; }
+    public double? latitude { get; set; }
+    public double?  longitude { get; set; }
+    public List<LanLng> LatLng { get; set; }
+
 }

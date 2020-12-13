@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Couriers } from '../class/Couriers';
 import { Observable } from 'rxjs';
 import { ShippingOperationsInRealTimeService } from '../services/shipping-operations-in-real-time.service';
+import { NgbPaginationNumber } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-shipping-operations-in-real-time',
   templateUrl: './shipping-operations-in-real-time.component.html',
@@ -10,17 +11,19 @@ import { ShippingOperationsInRealTimeService } from '../services/shipping-operat
 })
 export class ShippingOperationsInRealTimeComponent implements OnInit {
   manager: Couriers;
-  couriers: Couriers[] = [];
+  couriersMap: MapTOCurios[] = [];
   packageAddress: any;
   constructor(public shippingOperationsInRealTimeService: ShippingOperationsInRealTimeService, public router: Router) { }
 
   ngOnInit(): void {
+    // this.getDirection()
+
     this.getDirection()
     this.manager = JSON.parse(localStorage.getItem("manager"));
-    this.shippingOperationsInRealTimeService.getCouriers().subscribe(res => {
-      this.couriers = res;
+    this.shippingOperationsInRealTimeService.getCouriersDetailMaps().subscribe(res => {
+      this.couriersMap = res;
+      console.log( this.couriersMap);
     })
-    this.packageAddress = this.shippingOperationsInRealTimeService.getPackageAddress();
   }
   lat: Number = 32.0761814;
   lng: Number = 34.8327112;
@@ -63,4 +66,13 @@ export class ShippingOperationsInRealTimeComponent implements OnInit {
       country: ["IL"]
     }
   }
+}
+
+export class MapTOCurios{
+  CourierId: number;
+  CourierFirstName: string;
+  CourierLastName: string;
+  latitude :number;
+  longitude:number;
+  LatLng:Array<{Lat: number, Lng: number}>;
 }

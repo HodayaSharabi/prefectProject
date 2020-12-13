@@ -3,46 +3,14 @@
 <div id="a">
     <h3>תפעול המשלוחנים בזמן אמת</h3>
     <br>
-    <div id="CouriersWay" *ngFor="let i of couriers">
+    <div id="CouriersWay" *ngFor="let i of couriersMap">
         <div class="card" style="width: 18rem;">
             <p>קוד משלוחן: {{i.CourierId}}</p>
             <p>שם משלוחן: {{i.CourierFirstName}} {{i.CourierLastName}}</p>
-            <agm-map [latitude]="lat" [longitude]="lng">
-                <agm-marker [latitude]="packageAddress.SourcePackageLat" [longitude]="packageAddress.SourcePackageLon">
-                </agm-marker>
-                <agm-marker [latitude]="packageAddress.DestinetionPackageLat"
-                    [longitude]="packageAddress.DestinetionPackageLon">
-                </agm-marker>
-
-                <agm-direction [origin]="origin" [destination]="destination">
-                </agm-direction>
-
-                
+            <agm-map [latitude]="i.latitude" [longitude]="i.longitude" style="height: 300px" >
+           
+              <agm-marker *ngFor="let marker of i.LatLng" [latitude]="marker.Lat" [longitude]="marker.Lng"></agm-marker>
             </agm-map>
-            <!-- <agm-map
-                    [latitude]="latitude"
-                    [longitude]="longitude"
-                    [zoom]="2"
-                    (mapClick)="addMarker($event.coords.lat, $event.coords.lng)"
-                  >
-                    <agm-marker
-                      *ngFor="let marker of markers"
-                      [latitude]="marker.lat"
-                      [longitude]="marker.lng"
-                      [opacity]="marker.alpha"
-                      [markerDraggable]="true"
-                      (markerClick)="selectMarker($event)"
-                    >
-                    </agm-marker>
-                    <agm-rectangle
-                      [north]="max('lat')"
-                      [east]="max('lng')"
-                      [south]="min('lat')"
-                      [west]="min('lng')"
-                    >
-                    </agm-rectangle>
-           </agm-map> -->
-
 
         </div>
     </div>

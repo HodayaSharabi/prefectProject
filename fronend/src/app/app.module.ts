@@ -48,6 +48,8 @@ import { ShippingSelectionComponent } from './shipping-selection/shipping-select
 import { CommentsToCourierComponent } from './comments-to-courier/comments-to-courier.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GogelMapSearchComponent } from './gogel-map-search/gogel-map-search.component';
+import { RouterMapComponent } from './router-map/router-map.component';
+import { DirectionsMapDirective } from './directions-map.directive';
 // import { MatSliderModule } from '@angular/material/slider';
 // import {CommentsAndIlluminationsComponent}  
 
@@ -93,9 +95,12 @@ import { GogelMapSearchComponent } from './gogel-map-search/gogel-map-search.com
     ShippingSelectionComponent,
     CommentsToCourierComponent,
     GogelMapSearchComponent,
+    RouterMapComponent,
+    DirectionsMapDirective,
 
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -106,7 +111,8 @@ import { GogelMapSearchComponent } from './gogel-map-search/gogel-map-search.com
       // apiKey: 'AIzaSyBBpy-z05AEn8HQgg0jQ3JpNIzuTAo-OTw'//שלי
     //  apiKey:'AIzaSyCwf5KJRSPX0QNNrFegWfcoGDXxukDH6Kk' 
      apiKey:'AIzaSyAYSiaPzb95HxoqKGRKaYFczQZC8m3TlnE' ,
-     libraries: ['places' , 'javascript']
+     libraries: ['places' ]
+     
 
     }),
     AgmDirectionModule,

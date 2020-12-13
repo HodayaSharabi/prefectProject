@@ -24,5 +24,11 @@ namespace CourierProject.Controllers
         {
             return Ok( CourierBL.GetCouriersDetail());
         }
+        [Route("GetCouriersDetailMaps")]
+        public IHttpActionResult GetCouriersDetailMaps()
+        {
+            return Ok(CourierBL.GetCouriersDetailMaps());
+
+        }
     }
 }

@@ -1,5 +1,10 @@
 <agm-map [latitude]="lat" [longitude]="lng">
-    <agm-direction [origin]="origin" [destination]="destination"></agm-direction>
+
+    <agm-direction *ngFor="let i of listOriginDestination" [origin]="i.origin" [destination]="i.destination"   >
+
+    </agm-direction>
+    <agm-marker *ngFor="let marker of listWaypoints" [latitude]="marker.Lat" [longitude]="marker.Lng"></agm-marker>
+
 </agm-map>
 
 <!-- שימוש בשליחת קישור לוויז -->

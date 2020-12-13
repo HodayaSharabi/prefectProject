@@ -9,7 +9,8 @@
                         <!-- <app-gogel-map-search [latitude]="latitude" [longitude]="longitude" [address]="address">
                         </app-gogel-map-search> -->
                         <!-- (longitudec)="doSomething($event)"(addressc)="doSomething($event)" -->
-                        <app-gogel-map-search (lactitudec)="newShipment.SourcePackageLat=$event" (longitudec)="newShipment.SourcePackageLon=$event" (addressc)="newShipment.collectionAddressPac=$event" ></app-gogel-map-search>
+                        <app-gogel-map-search (latitudec)="newShipment.SourcePackageLat=$event" (longitudec)="newShipment.SourcePackageLon=$event" (addressc)="newShipment.collectionAddressPac=$event" ></app-gogel-map-search>
+                        <br><br><br>
                lat {{newShipment.SourcePackageLat}}<br>
                lon {{newShipment.SourcePackageLon}} <br>
            addreess {{newShipment.collectionAddressPac}}
@@ -23,7 +24,8 @@
                     DestinationPackageLat: number; -->
                     <div class="col-50">
                         <label for="fname"><b>כתובת יעד</b> </label>
-                        <app-gogel-map-search (lactitudec)="newShipment.DestinationPackageLat=$event" (longitudec)="newShipment.DestinetionPackageLon=$event" (addressc)="newShipment.destinationPac=$event" ></app-gogel-map-search>
+                        <app-gogel-map-search (latitudec)="newShipment.DestinationPackageLat=$event" (longitudec)="newShipment.DestinetionPackageLon=$event" (addressc)="newShipment.destinationPac=$event" ></app-gogel-map-search>
+                        <br><br><br>
                        lat {{newShipment.DestinationPackageLat}}<br>
                      lon   {{newShipment.DestinetionPackageLon}} <br>
                     addess {{newShipment.destinationPac}}

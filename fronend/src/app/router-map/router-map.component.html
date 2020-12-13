@@ -1,0 +1,13 @@
+<agm-map appDirectionsMap [showDirection]="this.displayDirections"
+         [origin]="origin"
+         [destination]="destination"
+
+         [zoom]="zoom"
+         [disableDefaultUI]="false"
+        >
+
+    <agm-marker
+            [latitude]="origin.latitude"
+            [longitude]="origin.longitude">
+    </agm-marker>
+</agm-map>

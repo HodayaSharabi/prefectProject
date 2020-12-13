@@ -35,6 +35,7 @@ import { UpdateDetailsCourierComponent } from './update-details-courier/update-d
 import { ShippingSelectionComponent } from './shipping-selection/shipping-selection.component';
 import { CommentsToCourierComponent } from './comments-to-courier/comments-to-courier.component';
 import { GogelMapSearchComponent } from './gogel-map-search/gogel-map-search.component';
+import { RouterMapComponent } from './router-map/router-map.component';
 
 
 const routes: Routes = [
@@ -211,7 +212,12 @@ const routes: Routes = [
   {
         path: "GogelMapSearchComponent",
         component: GogelMapSearchComponent
-      }
+      },
+      {
+        path: "RouterMap",
+        component: RouterMapComponent
+      },
+
 ];
 
 @NgModule({
